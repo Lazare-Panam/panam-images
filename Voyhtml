@@ -1,0 +1,853 @@
+<body><div class="w-embed"><style>
+  /* Page styles 
+--------------------- */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .btn-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffffffcc -10%, #ffffff33 75%, #ffffffcc 110%, #ffffff33 175%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .btn-primary.gradient::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    background: linear-gradient(to right, #becfaf 0%, #ebf0c8 28%, #bed86b 71%, #638bac 100%);
+    filter: blur(17px);
+  }
+
+  /* Learn more link */
+  .learn-more-link::after {
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: url('https://cdn.prod.website-files.com/68c67cfe94d4d9cb1e80c731/68dbbabf26e0b1d88ceba00e_ico-caret-right.svg') no-repeat;
+    background-size: cover;
+  }
+
+  /* List item bullet */
+  .list-item::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 8px;
+    top: 10px;
+    left: 4px;
+    background: #19301e;
+  }
+  .list-item.is-small::before {
+    top: 8px;
+  }
+  .ordered-list-group {
+    list-style: none;
+    counter-reset: item-counter;
+  }
+  .ordered-list-group .list-item {
+    counter-increment: item-counter;
+  }
+  .ordered-list-group .list-item::before {
+    background: transparent;
+    content: counter(item-counter) '.';
+    font-size: inherit;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* Misc styles */
+  .video-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .floating-cta.scrolled {
+    transform: translateY(0);
+  }
+
+  .mission_circle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffffffcc -10%, #ffffff33 75%, #ffffffcc 110%, #ffffff33 175%);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .item-about-nav.w--current {
+    background-color: #fff;
+    box-shadow: 0 8px 15px #0b3b3c1a;
+  }
+
+  .about-nav_list {
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  .about-nav_list::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  @media (max-width: 767px) {
+    .research_decor video {
+      transform: scale(1.03);
+    }
+  }
+
+  .item-meet_embed-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<style>
+  .menu-grad-box.type-fhl {
+    background: linear-gradient(133deg, rgb(155, 209, 194) -1.74%, rgb(236, 231, 216) 53.26%, rgb(194, 173, 219) 104.81%);
+  }
+
+  .item-trt-research_cta:hover .item-trt-research_cta-icon {
+    transform: translateX(5px);
+  }
+</style></div><div class="header transparent-invert scrolled"><a href="/weight-loss/medications/wegovy-pill" class="banner-main w-inline-block"><div class="banner-main-text">Oral weight loss support <span class="text-green-2">now available</span><span class="link-underline">Get started</span></div></a><div data-wf--header-content--variant="base" class="header-contain"><div class="nav-styles w-embed"><style>
+/* Header/Nav styles */
+.header.scrolled .nav-desktop {
+	height: 96px;
+  background: #ffffff;
+  box-shadow: 0px 8px 15px rgba(11, 59, 60, 0.1);
+}
+@media(max-width: 767px) {
+	.header.scrolled .nav-desktop {
+  	height: 64px;
+  }
+}
+.header.transparent-invert .nav-desktop {
+	background: transparent;
+  border-bottom: 1px solid #FFFFFF4D;
+  padding-top: 8px;
+}
+.header.transparent-invert .nav-desktop > * {
+	filter: grayscale(1) invert(1) contrast(5);
+}
+.header.transparent-invert.scrolled .nav-desktop {
+	background: #ffffff;
+  padding-top: 0;
+  border: 0;
+}
+.header.transparent-invert.scrolled .nav-desktop > * {
+	filter: none;
+}
+@media(max-width: 991px) {
+	.header.transparent-invert .nav-desktop {
+  	padding-top: 0;
+  }
+}
+
+.header.transparent-abs .nav-desktop {
+	background: transparent;
+  box-shadow: none;
+  /*padding-top: 8px;*/
+}
+
+
+.nav-left > *,
+.nav-right > * {
+	flex-shrink: 0;
+}
+.nav-site-type::before {
+	content: '';
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border-radius: 18px;
+  background: linear-gradient(to right bottom, #BECFAF 0%, #EBF0C8 28%, #BED86B 71%, #638BAC 100%);
+}
+
+/* Menu modal */
+.menu-modal.show {
+	display: block;
+}
+.menu-back::after {
+	content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  background: url('https://cdn.prod.website-files.com/6890b22ad1089ea56f838ac8/68a5dbfcf9e4795f6e310cb8_ico%20-%20left%2024.svg') no-repeat;
+  background-size: cover;
+}
+.menu-group-link::after {
+	content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: url('https://cdn.prod.website-files.com/6846ae5ff7d13efe85299107/6848108b5531260e598519b3_ico-caret-right.svg') no-repeat;
+  background-size: cover;
+}
+
+/* Menu tab */
+.menu-tab-bg.active {
+	transform: translateX(100%);
+}
+</style></div><nav class="nav-desktop"><div data-w-id="f5a843b7-b898-3075-543d-e1db4d5285fa" class="nav-left"><div id="menu-btn" data-disablescroll="" class="nav-btn"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e003_ico-menu.svg" alt="Menu" class="nav-ico"></div><div class="nav-link-desk">What we treat</div></div><div class="nav-middle"><a href="/" aria-current="page" class="nav-logo w-inline-block w--current"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a0_Voy%20Wordmark%2010.06.51%E2%80%AFPM.svg" alt="Voy" class="nav-logo-img"></a></div><div class="nav-right"><div class="nav-btn-btn"><a href="/login?redirect=%2Faccount%2Fhome" data-login-btn="" class="btn-secondary small w-button">Log in</a></div></div></nav><div id="mobile-menu" class="menu-modal" style="display: none; transform: translate3d(-100%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><div data-enablescroll="" data-w-id="f5a843b7-b898-3075-543d-e1db4d52860a" class="menu-modal-bg" style="opacity: 0;"></div><div class="menu-modal-content"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="f5a843b7-b898-3075-543d-e1db4d52860d" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e004_ico-close.svg" alt="Close"></div></div><div class="menu-content"><div class="menu-tabs-contain"><div class="menu-tabs"><div id="forMen" class="menu-tab">Men</div><div id="forWomen" class="menu-tab">Women</div><div class="menu-tab-bg"></div></div></div><div class="menu-group no-border"><div class="menu-group-title">What we treat</div><div data-w-id="f5a843b7-b898-3075-543d-e1db4d52861a" class="menu-group-link special"><div class="menu-grad-box"></div><div>Weight Loss</div></div><div data-menutab="women" data-w-id="f5a843b7-b898-3075-543d-e1db4d52861e" class="menu-group-link special" style="display: none;"><div class="menu-grad-box type-2"></div><div>Menopause</div></div><div data-menutab="women" data-w-id="ba46e3b4-5eea-df0e-8b69-9e4d6c1450b2" class="menu-group-link special" style="display: none;"><div class="menu-grad-box type-fhl"></div><div>Hair Loss</div></div><div data-menutab="men" data-w-id="f5a843b7-b898-3075-543d-e1db4d528622" class="menu-group-link special" style="display: flex;"><div class="menu-grad-box type-3"></div><div>Testosterone</div></div><div data-menutab="men" data-w-id="f5a843b7-b898-3075-543d-e1db4d528626" class="menu-group-link special" style="display: flex;"><div class="menu-grad-box type-4"></div><div>Hair Loss</div></div><a data-menutab="women" href="https://www.joinvoy.com/menopause/treatments/testosterone-treatment-plans?manualSid=S-LF3ehgDkyG" class="menu-group-link special w-inline-block" style="display: none;"><div class="menu-grad-box women-trt"></div><div>Testosterone</div></a><a data-menutab="women" href="https://www.joinvoy.com/adhd-diagnosis?manualSid=S-LF3ehgDkyG" class="menu-group-link special w-inline-block" style="display: none;"><div class="menu-grad-box adhd"></div><div>ADHD assessment</div></a><div data-menutab="men" data-w-id="c4a77d19-9c40-9497-5364-f573b3bbd3e9" class="menu-group-link special" style="display: flex;"><div class="menu-grad-box type-men-sex"></div><div>Sexual Health</div></div></div><div class="menu-group"><div class="menu-group-title">Preventive health</div><a href="https://dohealth.co/?utm_medium=referral&amp;utm_source=voy&amp;utm_content=nav" class="menu-card-link w-inline-block"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/696a1d40a2bbbee1e9af8c88_Do%20icon.svg" loading="lazy" alt="" class="menu-card-link-ico"><div class="menu-card-link-texts"><div class="menu-card-link-title">Do health</div><div class="menu-card-link-text">Lifestyle programme powered by your biology and blood results</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="menu-card-link-caret"></a></div><div class="menu-group"><div class="menu-group-title">VOY</div><a data-login-btn="" href="/medical-expertise" class="menu-group-link w-inline-block"><div class="menu-link-text">Meet the experts</div></a><a data-login-btn="" href="/blog" class="menu-group-link w-inline-block"><div class="menu-link-text">Guides</div></a><a data-login-btn="" href="/about-us" class="menu-group-link w-inline-block"><div class="menu-link-text">About Us</div></a></div><div class="menu-group"><div class="menu-group-title">ACCOUNT</div><a data-login-btn="" href="/login?redirect=%2Faccount%2Fhome" class="menu-group-link w-inline-block"><div class="menu-link-text">Log in</div></a></div></div></div><div class="submodal-wl hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="f5a843b7-b898-3075-543d-e1db4d52869b" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e004_ico-close.svg" alt="Close"></div></div><div class="menu-content"><div data-w-id="f5a843b7-b898-3075-543d-e1db4d52869e" class="menu-back">Weight Loss</div><div class="menu-group no-border"><div class="menu-group-title">Overview</div><a href="/weight-loss" class="menu-group-link special-book w-inline-block"><div class="menu-grad-box"></div><div>Weight loss overview</div></a></div><div class="menu-group"><div class="menu-group-title">Treatments</div><a href="/weight-loss/medications" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e005_wl-Nav-mob-Image-01.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-text">Explore all options</div></a><a href="/weight-loss/medications/mounjaro" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e01b_wl-Nav-mob-Image-02.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-texts"><div class="menu-link-text">Mounjaro</div><div>Lose up to 23% body weight</div></div></a><a href="/weight-loss/medications/wegovy" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e009_wl-Nav-mob-Image-03.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-texts"><div class="menu-link-text">Wegovy</div><div>Lose up to 21% body weight</div></div></a><a href="https://www.joinvoy.com/weight-loss/medications/wegovy-pill?manualSid=S-LF3ehgDkyG" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a2ad159465df8c314e9dd47_Pill%2BMenu%2BImage%2B224x224.png" alt="Wegovy Pill " class="menu-link-pic"><div class="menu-link-texts"><div class="menu-link-text">Wegovy Pill</div><div>Lose up to 17% body weight</div></div></a><a href="/weight-loss/medications/saxenda" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e00f_wl-Nav-mob-Image-04.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-texts"><div class="menu-link-text">Saxenda</div><div>Lose up to 10% body weight</div></div></a><a href="/weight-loss/medications/orlistat" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e007_wl-Nav-mob-Image-05.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-texts"><div class="menu-link-text">Orlos</div><div>Lose up to 8% body weight</div></div></a></div><div class="menu-group"><div class="menu-group-title">About</div><a href="/weight-loss/how-it-works" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e00b_wl-Nav-mob-Image-06.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-text">How it works</div></a><a href="/weight-loss/app" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e00d_wl-Nav-mob-Image-08.avif" alt="Menu link" class="menu-link-pic"><div class="menu-link-text">App</div></a><a href="/weight-loss/results" class="menu-group-link w-inline-block"><div class="menu-link-texts"><div class="menu-link-text">Results</div></div></a><a href="/experts" class="menu-group-link w-inline-block"><div class="menu-link-text">Experts</div></a></div><div class="menu-group"><div class="menu-group-title">Resources</div><a href="/blog/weight" class="menu-group-link w-inline-block"><div class="menu-link-text">Guides &amp; tips</div></a><a href="https://www.joinvoy.com/weight-loss/bmi-calculator?manualSid=S-LF3ehgDkyG" class="menu-group-link w-inline-block"><div class="menu-link-text">BMI Calculator</div></a><a href="https://www.joinvoy.com/weight-loss/tdee-calculator?manualSid=S-LF3ehgDkyG" class="menu-group-link w-inline-block"><div class="menu-link-text">TDEE Calculator</div></a></div><div class="menu-group"><div class="menu-group-title">ACCOUNT</div><a data-login-btn="" href="/login?redirect=%2Faccount%2Fhome" class="menu-group-link w-inline-block"><div class="menu-link-text">Log in</div></a></div><div class="menu-group"><div class="menu-group-title">Get in touch</div><a href="tel:+442039129885" class="menu-group-link w-inline-block"><div class="menu-link-texts"><div class="menu-link-text">020 3912 9885</div><div>Mon-Fri 9:00-17:30</div></div></a></div></div></div><div class="submodal-mp hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="f5a843b7-b898-3075-543d-e1db4d5286ff" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e004_ico-close.svg" alt="Close"></div></div><div class="menu-content"><div data-w-id="f5a843b7-b898-3075-543d-e1db4d528702" class="menu-back">Menopause</div><div class="menu-group no-border"><div class="menu-group-title-2">Overview</div><a href="/menopause" class="menu-group-link-5 special-book w-inline-block"><div class="menu-grad-box type-2"></div><div>Menopause home</div></a></div><div class="menu-group"><div class="menu-group-title-2">About</div><a href="/menopause/pricing" class="menu-group-link-6 w-inline-block"><div class="menu-link-text">Pricing</div></a><a href="/menopause/clinicians" class="menu-group-link-6 w-inline-block"><div class="menu-link-text">Specialists</div></a></div><div class="menu-group"><div class="menu-group-title-2">Treatment plans</div><a href="/menopause/treatments/testosterone-treatment-plans" class="menu-group-link-7 w-inline-block"><img width="56" height="56" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a1d71e998ff3a4ad7c57c67_Image.png" loading="lazy"><div class="menu-link-text">Testosterone treatment</div></a><a href="/menopause/treatments/hormone-replacement-therapy-plans" class="menu-group-link-7 w-inline-block"><img width="56" height="56" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a1d71e998ff3a4ad7c57c64_Image-1.png" loading="lazy"><div class="menu-link-text">Hormone replacement <br>therapy</div></a><a href="/menopause/treatments/vaginal-oestrogen-treatment-plans" class="menu-group-link-7 w-inline-block"><img width="56" height="56" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a1d71e998ff3a4ad7c57c61_Image-2.png" loading="lazy"><div class="menu-link-text">Vaginal treatments</div></a></div><div class="menu-group"><div class="menu-group-title-2">WHAT WE TREAt</div><a href="/menopause/conditions/perimenopause" class="menu-group-link-8 w-inline-block"><div class="menu-link-text">Perimenopause</div></a><a href="/menopause/conditions/menopause" class="menu-group-link-8 w-inline-block"><div class="menu-link-text">Menopause</div></a><a href="/menopause/conditions/adhd-and-menopause" class="menu-group-link-8 w-inline-block"><div class="menu-link-text">ADHD and Menopause</div></a><a href="/menopause/conditions/pmdd-and-menopause" class="menu-group-link-8 w-inline-block"><div class="menu-link-text">Premenstrual Dysphoric Disorder (PMDD)</div></a></div><div class="menu-group"><div class="menu-group-title-2">BLOOD&nbsp;TESTS</div><a href="/menopause/midlife-womens-blood-test" class="menu-group-link-9 w-inline-block"><div class="menu-link-text">Women's midlife (MOT) blood test</div></a><a href="/menopause/monitor-hrt-test" class="menu-group-link-9 w-inline-block"><div class="menu-link-text">Monitor HRT blood test</div></a><a href="/menopause/start-testosterone-test" class="menu-group-link-9 w-inline-block"><div class="menu-link-text">Start testosterone blood test</div></a></div><div class="menu-group"><div class="menu-group-title-2">Products</div><a href="/menopause/voy-supplements" class="menu-group-link-10 w-inline-block"><img width="56" height="56" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a1d71f35ba2ebd4fd281c74_Image.png" loading="lazy"><div class="menu-link-text">Supplements</div><div class="menu-group-link-badge">New</div></a><a href="/menopause/treatments/estriol-skin-cream" class="menu-group-link-10 w-inline-block"><img width="56" height="56" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a1d71f35ba2ebd4fd281c71_Image-1.png" loading="lazy"><div class="menu-link-text">Skincare</div><div class="menu-group-link-badge">New</div></a></div><div class="menu-group"><div class="menu-group-title-2">LEARN</div><a href="/blog/menopause" class="menu-group-link-11 w-inline-block"><div class="menu-link-text">Guides</div></a><a href="/menopause/treatments" class="menu-group-link-11 w-inline-block"><div class="menu-link-text">Treatments</div></a></div><div class="menu-group"><div class="menu-group-title-2">ACCOUNT</div><a data-login-btn="" href="https://menopause.joinvoy.com/login?redirect=%2Faccount%2Fhome&amp;manualSid=S-LF3ehgDkyG" class="menu-group-link-12 w-inline-block"><div class="menu-link-text">Log in</div></a><a href="https://www.joinvoy.com/menopause/how-to-refer-a-friend?manualSid=S-LF3ehgDkyG" class="menu-group-link-12 w-inline-block"><div class="menu-wrapper"><div class="menu-link-text">Refer a friend</div><div>Share your code to both save 50%</div></div></a></div><div class="menu-group"><div class="menu-group-title-2">Support</div><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="menu-group-link-13 w-inline-block"><div class="menu-link-text">FAQ</div></a></div></div></div><div class="submodal-trt hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="f5a843b7-b898-3075-543d-e1db4d528635" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e004_ico-close.svg" alt="Close"></div></div><div class="menu-content"><div data-w-id="f5a843b7-b898-3075-543d-e1db4d528638" class="menu-back">Testosterone</div><div class="menu-group no-border"><div class="menu-group-title">Overview</div><a href="/trt" class="menu-group-link special-book w-inline-block"><div class="menu-grad-box type-3"></div><div>Testosterone overview</div></a></div><div class="menu-group"><div class="menu-group-title">About TRT</div><a href="/trt/how-it-works" class="menu-group-link w-inline-block"><div class="menu-link-text">How it works &amp; Pricing</div></a><a href="/trt/experts" class="menu-group-link w-inline-block"><div class="menu-link-text">Medical team</div></a><a href="/trt/science-and-research" class="menu-group-link w-inline-block"><div class="menu-link-text">Science and research<br></div></a></div><div class="menu-group"><div class="menu-group-title">CHECK YOUR TESTOSTERONE LEVELS</div><a href="/trt/testosterone-blood-test" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e015_at-home-blood-test-thumb.webp" alt="Blood test" class="menu-link-pic"><div class="menu-link-text">At-Home Testosterone Blood Test</div></a><a href="/trt/enhanced-testosterone-blood-test" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e017_enhanced-home-blood-test-thumb.webp" alt="Blood test" class="menu-link-pic"><div class="menu-link-text">Enhanced Testosterone Blood Test</div></a></div><div class="menu-group"><div class="menu-group-title">REVIEWS</div><a href="/trt/results" class="menu-group-link w-inline-block"><div class="menu-link-text-inner"><div>What people say</div><div class="menu-link-text-inner-2"><div>(</div><div class="text-medium">4.7/5</div></div><div>Trustpilot)</div></div></a><a href="/trt/trt-before-and-after" class="menu-group-link w-inline-block"><div class="menu-link-text-inner"><div>TRT before and after</div></div></a></div><div class="menu-group"><div class="menu-group-title">EVERYTHING YOU NEED TO KNOW</div><a href="/blog/health-lifestyle-testosterone" class="menu-group-link w-inline-block"><img sizes="(max-width: 1760px) 100vw, 1760px" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon-p-500.png 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon-p-800.png 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon-p-1080.png 1080w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon-p-1600.png 1600w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon.png 1760w" alt="" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a294d42bb198eb62c934a83_trt_weight_icon.png" loading="lazy" class="menu-link-pic"><div class="menu-link-text">Lifestyle, health and testosterone</div></a><a href="/blog/low-t-symptoms" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e013_low-testosterone-symptoms.svg" alt="Low TRT" class="menu-link-pic"><div class="menu-link-text">Symptoms of low testosterone</div></a><a href="/blog/what-is-trt" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e012_what-is-trt.svg" alt="What" class="menu-link-pic"><div class="menu-link-text">What is TRT?</div></a><a href="/blog/trt-benefits" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e014_benefits-of-trt.svg" alt="benefits" class="menu-link-pic"><div class="menu-link-text">Benefits of TRT</div></a><a href="/blog/testosterone-levels-in-men" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e011_normal-male-testosterone-levels.svg" alt="Levels" class="menu-link-pic"><div class="menu-link-text">Normal male testosterone levels</div></a><a href="/blog/testosterone" class="menu-group-link w-inline-block"><div class="menu-link-text">View all articles</div></a></div><div class="menu-group"><div class="menu-group-title">ACCOUNT</div><a data-login-btn="" href="/login?redirect=%2Faccount%2Fhome" class="menu-group-link w-inline-block"><div class="menu-link-text">Log in</div></a></div><div class="menu-group"><div class="menu-group-title">Support</div><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="menu-group-link w-inline-block"><div class="menu-link-text">Help Centre</div></a></div></div></div><div class="submodal-hl hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="4d8dcd02-2af2-2e5d-ef4b-b01cd0d243ec" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/691daa161823bbc4e320b5f1/691daa161823bbc4e320b6fb_ico-close.svg" alt=""></div></div><div class="menu-content"><div data-w-id="4d8dcd02-2af2-2e5d-ef4b-b01cd0d243ef" class="menu-back">Hair Loss</div><div class="menu-group no-border"><div class="menu-group-title">Overview</div><a href="/hair-loss" class="menu-group-link special-book w-inline-block"><div class="menu-grad-box type-hl"></div><div>Hair loss overview</div></a></div><div class="menu-group"><div class="menu-group-title">Treatments</div><a href="/hair-loss/treatments/complete-hair-loss-plan" class="menu-group-link w-inline-block"><div class="menu-link-text">Complete Hair Loss Plan</div></a><a href="/hair-loss/treatments/finasteride" class="menu-group-link w-inline-block"><div class="menu-link-text">Finasteride Plan</div></a><a href="/hair-loss/treatments/minoxidil" class="menu-group-link w-inline-block"><div class="menu-link-text">Minoxidil Plan</div></a><a href="/hair-loss/treatments/hair-vitamins" class="menu-group-link w-inline-block"><div class="menu-link-text">Hair Vitamins</div></a><a href="/hair-loss/treatments/power-shampoo" class="menu-group-link w-inline-block"><div class="menu-link-text">Power Shampoo</div></a></div><div class="menu-group hide"><div class="menu-group-title">Reviews</div><a href="#" class="menu-group-link-2 w-inline-block"><div class="menu-link-text-inner"><div>What people say</div><div class="menu-link-text-inner-2"><div>(</div><div class="text-medium">4.7/5</div></div><div>Trustpilot)</div></div></a></div><div class="menu-group"><div class="menu-group-title">Everything you need to know</div><a href="/blog/topical-dutasteride-for-hair-loss" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697a04c45b081fdffe7df84c_topical-dutasteride-1-1.svg" alt="" class="menu-link-pic"><div class="menu-link-text">Topical Dutasteride for hair loss</div></a><a href="/blog/finasteride-vs-minoxidil" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697a04c45b081fdffe7df84a_finasteride-vs-minoxidil-1-1.svg" alt="" class="menu-link-pic"><div class="menu-link-text">Finasteride vs Minoxidil</div></a><a href="/blog/dutasteride-vs-finasteride" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697a04c45b081fdffe7df849_dutasteride-vs-finasteride-1-1.svg" alt="" class="menu-link-pic"><div class="menu-link-text">Dutasteride vs Finasteride</div></a><a href="/blog/does-minoxidil-work" class="menu-group-link w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697a04c45b081fdffe7df84b_does-minoxidil-work-1-1.svg" alt="" class="menu-link-pic"><div class="menu-link-text">Minoxidil - Does it work?</div></a><a href="/blog/hair-loss" class="menu-group-link w-inline-block"><div class="menu-link-text">View all articles</div></a></div><div class="menu-group"><div class="menu-group-title">Account</div><a href="/login?redirect=%2Faccount%2Fhome" class="menu-group-link w-inline-block"><div class="menu-link-text">Log in</div></a></div><div class="menu-group"><div class="menu-group-title">Support</div><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="menu-group-link w-inline-block"><div class="menu-link-text">Help Centre</div></a></div></div></div><div class="submodal-fhl hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="ad94ccf6-ee49-6c2b-981e-792911d63b56" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6908a572f10b53c325d5e004_ico-close.svg" alt="Close"></div></div><div class="menu-content"><div data-w-id="ad94ccf6-ee49-6c2b-981e-792911d63b59" class="menu-back">Hair Loss</div><div class="menu-group no-border"><div class="menu-group-title">Overview</div><a href="/female-hair-loss" class="menu-group-link special-book w-inline-block"><div class="menu-grad-box type-hl"></div><div>Hair loss overview</div></a></div><div class="menu-group"><div class="menu-group-title">TREATMENTS</div><a href="/female-hair-loss/treatments/minoxidil-plans" class="menu-group-link-4 w-inline-block"><div class="menu-link-text">Minoxidil Plans</div></a><a href="/female-hair-loss/treatments/hair-vitamins" class="menu-group-link-4 w-inline-block"><div class="menu-link-text">Hair Vitamins</div></a></div><div class="menu-group"><div class="menu-group-title">EVERYTHING YOU NEED TO KNOW</div><a href="/blog/hair-loss-treatments-for-women" class="menu-group-link-4 w-inline-block"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69fcd878c319d09092d828d3_Image%20(39).png" loading="lazy" alt="" class="menu-link-pic"><div class="menu-link-text">Hair Loss Treatments for Women</div></a><a href="/blog/minoxidil-for-women-does-it-work" class="menu-group-link-4 w-inline-block"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69fcd878c319d09092d828d5_Image%20(40).png" loading="lazy" alt="" class="menu-link-pic"><div class="menu-link-text">Minoxidil for Women - Does it Work?</div></a><a href="/blog/how-to-use-topical-minoxidil-for-women" class="menu-group-link-4 w-inline-block"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69fcd878c319d09092d828d4_Image%20(41).png" loading="lazy" alt="" class="menu-link-pic"><div class="menu-link-text">How to Use Topical Minoxidil for Women</div></a><a href="/blog/female-pattern-baldness" class="menu-group-link-4 w-inline-block"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69fcd878c319d09092d828d2_Image%20(42).png" loading="lazy" alt="" class="menu-link-pic"><div class="menu-link-text">Female Pattern Baldness</div></a><a href="/blog/female-hair-loss" class="menu-group-link-4 w-inline-block"><div class="menu-link-text">View all articles</div></a></div><div class="menu-group"><div class="menu-group-title">ACCOUNT</div><a href="https://www.joinvoy.com/login?redirect=%2Faccount%2Fhome&amp;manualSid=S-LF3ehgDkyG" class="menu-group-link-4 w-inline-block"><div class="menu-link-text">Log in</div></a></div><div class="menu-group"><div class="menu-group-title">Support</div><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="menu-group-link-4 w-inline-block"><div class="menu-link-text">Help Centre</div></a></div></div></div><div class="submodal-sex-health-men hide"><div class="menu-modal-header"><div data-enablescroll="" data-w-id="d4b05383-3a2a-f948-9ea5-682afc785d6a" class="menu-close"><img loading="eager" src="https://cdn.prod.website-files.com/699d9866373688b46a950adc/699d9b84860608aaa7e0cf4e_ico-close.svg" alt=""></div></div><div class="menu-content"><div data-w-id="d4b05383-3a2a-f948-9ea5-682afc785d6d" class="menu-back">Sexual Health</div><div class="menu-group no-border"><div class="menu-group-title-3">Overview</div><a href="/sexual-health" class="menu-group-link-15 special-book w-inline-block"><div class="menu-grad-box sexual-health-men"></div><div>Sexual Health home</div></a></div><div class="menu-group"><div class="menu-group-title-3">Treatments</div><a href="/blog/topical-dutasteride-for-hair-loss" class="menu-group-link-15 w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6a5a3632d3eab827e6eb699c_6a4e16014177218fd7a15c88_Image%20(15).png" alt="" class="menu-link-pic"><div class="menu-link-text">Find the right solution</div></a></div><div class="menu-group"><div class="menu-group-title-3">Products</div><a href="/hair-loss/treatments/complete-hair-loss-plan" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Tadalafil</div></a><a href="/hair-loss/treatments/complete-hair-loss-plan" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Sildenafil</div></a></div><div class="menu-group"><div class="menu-group-title-3">Learn</div><a href="/blog/tadalafil" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">What is tadalafil?</div></a><a href="/blog/health-lifestyle-testosterone" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Lifestyle, health and testosterone</div></a><a href="/blog/testosterone-levels-in-men" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Testosterone levels in men explained</div></a><a href="/blog/low-t-symptoms" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Signs of low testosterone in men</div></a></div><div class="menu-group"><div class="menu-group-title-3">Account</div><a href="/login?redirect=%2Faccount%2Fhome" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Log in</div></a></div><div class="menu-group"><div class="menu-group-title-3">Support</div><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="menu-group-link-15 w-inline-block"><div class="menu-link-text">Help Centre</div></a></div></div></div></div><div class="header-code w-embed w-script"><script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // URL parameters
+    const menuUrlParams = new URLSearchParams(window.location.search);
+    const menuParamValue = menuUrlParams.get('impersonation');
+    const allLoginBtns = document.querySelectorAll('[data-login-btn]');
+    allLoginBtns.forEach((btn) => {
+      if (menuParamValue === 'true') {
+        btn.textContent = 'Account';
+        btn.href = '/account/home';
+      }
+    });
+
+    // Menu tab toggle
+    const allMenuTabs = document.querySelectorAll('.menu-tab');
+    const allMenuItems = document.querySelectorAll('.menu-group-link[data-menutab]');
+    const menuMen = document.querySelectorAll('.menu-group-link[data-menutab="men"]');
+    const menuWomen = document.querySelectorAll('.menu-group-link[data-menutab="women"]');
+    const menuTabBg = document.querySelector('.menu-tab-bg');
+    const menBtn = document.querySelector('.menu-tab#forMen');
+    const womenBtn = document.querySelector('.menu-tab#forWomen');
+    let isActive = false;
+
+    function toggleTab(isWomen) {
+      isActive = isWomen;
+      menuTabBg.classList.toggle('active', isActive);
+      allMenuItems.forEach((item) => (item.style.display = 'none'));
+      if (isActive) {
+        menuWomen.forEach((item) => (item.style.display = 'flex'));
+      } else menuMen.forEach((item) => (item.style.display = 'flex'));
+    }
+    toggleTab(isActive);
+    menBtn.addEventListener('click', () => toggleTab(false));
+    womenBtn.addEventListener('click', () => toggleTab(true));
+  });
+</script></div></div></div><div class="padding-div"></div><section class="hero-full"><div class="container"><div class="hero-full-texts"><h1 class="h1-big">Today can be<br>life changing</h1><p class="hero-full-para">Whatever better looks like to you, we'll make it happen</p><div class="hero-full-ctas"><div data-scrollto-link="category-women" class="btn-glass"><div class="btn-text-inner for-desktop">Women's health</div><div class="btn-text-inner for-mobile">Women</div></div><div data-scrollto-link="category-men" class="btn-glass"><div class="btn-text-inner for-desktop">Men's health</div><div class="btn-text-inner for-mobile">Men</div></div></div></div></div><div class="w-embed"><video width="100%" autoplay="true" loop="true" muted="true" playsinline="" class="video-embed">
+    <source src="https://cdn.joinvoy.com/voyage/rebrand-assets/Core+Website/Category+Page/Video/Weight+Loss+Hero+Video+Desktop.mp4" type="video/mp4">
+</video></div><div class="w-embed"><style>
+.hero-full .video-embed {
+	z-index: -3;
+}
+.hero-full::before,
+.hero-full::after {
+	content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+}
+.hero-full::before {
+	z-index: -2;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 30%);
+}
+.hero-full::after {
+	z-index: -1;
+  background: rgba(0,0,0,0.1);
+}
+</style></div></section><section id="marquee" class="hero-marquee-sec"><div class="w-embed"><style>
+.hero-marquee-sec .hero-marquee-wrap::before,
+.hero-marquee-sec .hero-marquee-wrap::after {
+	content: '';
+  position: absolute;
+  height: 100%;
+  width: 40px;
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 20%, rgba(255,255,255,0.2) 100%);
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-marquee-sec .hero-marquee-wrap::after {
+	left: initial;
+  right: 0;
+  transform: rotate(180deg);
+}
+</style></div><div class="hero-marquee-outer"><div class="hero-marquee-logos"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff49f68700e8c4733ed3ba_Trustpilot%20logo.svg" loading="lazy" alt="Trustpilot"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff49f677862e7e750b13dd_Trustpilot%20stars.svg" loading="lazy" alt="Stars"></div><div class="hero-marquee-wrap"><div class="hero-marquee-all" style="flex-direction: row; animation: 12s linear 0s infinite normal forwards running marquee;"><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e3_Ico-user-filled.svg" alt="User" class="hero-marquee-point-ico"><div>Rated 4.7 on Trustpilot</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e6_Ico-delivery-box.svg" alt="Delivery" class="hero-marquee-point-ico"><div>Regulated by the MHRA, CQC</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e5_Ico-microscope.svg" alt="microscope" class="hero-marquee-point-ico"><div>More than 1.5 million patients</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e7_Ico-Subscription.svg" alt="Subscription" class="hero-marquee-point-ico"><div>4.9 Satisfaction score</div><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690dd53f3317f2580436d8dd_ico-chat-white.svg" alt="Chat" class="hero-marquee-point-ico"></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e3_Ico-user-filled.svg" alt="User" class="hero-marquee-point-ico"><div>Rated 4.7 on Trustpilot</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e6_Ico-delivery-box.svg" alt="Delivery" class="hero-marquee-point-ico"><div>Regulated by the MHRA, CQC</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e5_Ico-microscope.svg" alt="microscope" class="hero-marquee-point-ico"><div>More than 1.5 million patients</div></div><div class="hero-marquee-point"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68ff4873809449997b9b82e7_Ico-Subscription.svg" alt="Subscription" class="hero-marquee-point-ico"><div>4.9 Satisfaction score</div><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690dd53f3317f2580436d8dd_ico-chat-white.svg" alt="Chat" class="hero-marquee-point-ico"></div></div></div></div><div class="w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const heroMarquee = document.querySelector('.hero-marquee-sec .hero-marquee-all');
+  const marqueeHDuration = heroMarquee.childElementCount * 3;
+  const allHChildren = heroMarquee.childNodes;
+  heroMarquee.style.flexDirection = 'row';
+  heroMarquee.style.animation = 'marquee 12s linear infinite forwards';
+
+  allHChildren.forEach((hero) => {
+    let clone = hero.cloneNode(true);
+    heroMarquee.appendChild(clone);
+  });
+  heroMarquee.style.animationDuration = `${marqueeHDuration}s`;
+});
+</script></div></section><section id="category-women" class="category-sec"><div class="category-sec-container"><div class="category-sec-heading"><div class="section-tag">Voy Women</div><h2 class="category-sec-title">Women’s health</h2></div><div class="cat-sec-grid"><a href="/weight-loss" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Weight Loss</h3><div class="cat-sec-grid-para">Clinically proven treatment to lose weight</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00581828f24c9cf537_e99dead026accb640c6ba8c0bb09bc89_join-voy-women-weight.avif" loading="lazy" width="867" sizes="(max-width: 991px) 100vw, 867px" alt="" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00581828f24c9cf537_e99dead026accb640c6ba8c0bb09bc89_join-voy-women-weight-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00581828f24c9cf537_e99dead026accb640c6ba8c0bb09bc89_join-voy-women-weight.avif 1156w" class="cat-sec-grid-box-img"></a><a href="/menopause" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Menopause</h3><div class="cat-sec-grid-para">Treatment service plans for hormone health</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d003ee162e9f45a22ec_da5e58113f07d303f04e99de7edf0af4_join-voy-women-menopause.avif" loading="lazy" width="867" sizes="(max-width: 991px) 100vw, 867px" alt="" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d003ee162e9f45a22ec_da5e58113f07d303f04e99de7edf0af4_join-voy-women-menopause-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d003ee162e9f45a22ec_da5e58113f07d303f04e99de7edf0af4_join-voy-women-menopause-p-800.avif 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d003ee162e9f45a22ec_da5e58113f07d303f04e99de7edf0af4_join-voy-women-menopause.avif 1734w" class="cat-sec-grid-box-img"></a><a id="w-node-d7469c2d-3958-0857-1899-3e37d43cb5a8-22eb2020" href="/female-hair-loss" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Hair Loss</h3><div class="cat-sec-grid-para">Complete hair restoration</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69f9c9cdf9a734ec1424156c_join-voy-women-hair-loss-2-bottles.avif" loading="lazy" width="867" alt="Voy Hair" class="cat-sec-grid-box-img img-wide"></a></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69778d3a564acea9e49000cd_home-voy-womens-health.avif" loading="lazy" alt="" class="category-sec-bg"><div class="category-sec-bg-color"></div></section><section id="category-men" class="category-sec move-up"><div class="category-sec-container"><div class="category-sec-heading"><div class="was-manual-box"><div class="was-manual-box-texts"><div class="was-manual-box-text-1">MANUAL is now Voy Men</div><div class="was-manual-box-text-2">We’ve changed our name to Voy, but our mission and commitment to you remain exactly the same.</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690dc12dc4c3eacf72bccccf_ManualWordmark%20-%20white.svg" loading="lazy" alt="Manual" class="was-manual-box-logo"></div><div class="section-tag">Voy Men</div><h2 class="category-sec-title">Men’s health</h2></div><div class="cat-sec-grid"><a href="/trt" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Testosterone</h3><div class="cat-sec-grid-para">Effective, proven treatment for low testosterone</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00113924a28987b601_b88a0db3e3af27d9ff2ade7237d73ad9_join-voy-men-trt.avif" loading="lazy" width="867" sizes="(max-width: 991px) 100vw, 867px" alt="" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00113924a28987b601_b88a0db3e3af27d9ff2ade7237d73ad9_join-voy-men-trt-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00113924a28987b601_b88a0db3e3af27d9ff2ade7237d73ad9_join-voy-men-trt-p-800.avif 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734d00113924a28987b601_b88a0db3e3af27d9ff2ade7237d73ad9_join-voy-men-trt.avif 1734w" class="cat-sec-grid-box-img"></a><a href="/weight-loss" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Weight Loss</h3><div class="cat-sec-grid-para">Clinically proven treatment to lose weight</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cff18a4996ffe718820_f12b85b9ef85bcfc0d5692dd06a44fa9_join-voy-men-weight.avif" loading="lazy" width="850" sizes="(max-width: 991px) 100vw, 850px" alt="" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cff18a4996ffe718820_f12b85b9ef85bcfc0d5692dd06a44fa9_join-voy-men-weight-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cff18a4996ffe718820_f12b85b9ef85bcfc0d5692dd06a44fa9_join-voy-men-weight.avif 1156w" class="cat-sec-grid-box-img"></a><a id="w-node-fb0c0bfe-b34c-0e0d-56dd-d06ec9f0d7b1-22eb2020" href="/hair-loss" class="cat-sec-grid-box w-inline-block"><div class="cat-sec-grid-box-head"><div class="cat-sec-grid-box-texts"><h3>Hair Loss</h3><div class="cat-sec-grid-para">Complete hair restoration</div></div><div class="cat-sec-grid-box-arrow"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" loading="lazy" alt="Caret" class="cat-sec-grid-box-caret"></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cb224f5317e4c06e407_0538eb7631d41de4703fefea511921a8_join-voy-men-hair-loss-bottles.avif" loading="lazy" width="867" sizes="(max-width: 991px) 100vw, 867px" alt="Voy Hair" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cb224f5317e4c06e407_0538eb7631d41de4703fefea511921a8_join-voy-men-hair-loss-bottles-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69734cb224f5317e4c06e407_0538eb7631d41de4703fefea511921a8_join-voy-men-hair-loss-bottles.avif 1734w" class="cat-sec-grid-box-img img-wide"></a></div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/698a002f88740358bebdb808_f1992b1d65cba0eece01249464e90a33_home-voy-womens-health-1-1.webp" loading="lazy" alt="" class="category-sec-bg-kevin"><div class="category-sec-bg-kevin-color"></div><div class="w-embed"><style>
+.category-sec::before,
+.category-sec-grid::after {
+	content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.category-sec::before {
+  left: 0;
+  height: 490px;
+  background: linear-gradient(rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+  opacity: 1;
+  z-index: -1;
+}
+.category-sec-grid::after {
+	left: 50%;
+  transform: translateX(-50%);
+	width: 100vw;
+  height: calc(100% + 120px);
+  /*background: rgba(255,255,255,0.8);*/
+  backdrop-filter: blur(55px);
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-mask: linear-gradient(#0000 10%, #000 100%);
+  mask: linear-gradient(#0000 10%, #000 100%);
+  z-index: -2;
+}
+.category-sec.move-up::before { display: none; }
+</style></div></section><section class="charts-sec"><div class="container pad-120"><div class="charts-sec-heading"><h2 class="h2-big">Changing lives through proven outcomes</h2></div><div class="charts-grid"><div class="charts-grid-box full-width"><div class="charts-grid-content type-2"><div class="charts-grid-texts type-2"><div class="charts-sec-tag">Weight loss</div><div class="charts-sec-stat">5x</div><p class="charts-sec-para-copy">Patients lost 5 times more weight with Voy than with diet and exercise alone.</p></div><div class="charts-grid-image type-2"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6984ab02c946d84636cbe200_chart-weight-loss-diet-exercise.svg" loading="lazy" alt="Chart" class="charts-grid-img"></div></div></div><div class="charts-grid-box"><div class="charts-grid-content"><div class="charts-grid-texts"><div class="charts-sec-tag">WEight loss</div><p class="charts-sec-para">97% of patients felt that their overall health had improved with Voy</p></div><div class="charts-grid-image"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6911be552224ce8519fc72df_Donut%20Chart%2091.avif" loading="lazy" alt="Chart" class="charts-grid-img"></div></div></div><div class="charts-grid-box"><div class="charts-grid-content"><div class="charts-grid-texts"><div class="charts-sec-tag">Testosterone</div><div class="charts-sec-stat">296%</div><p class="charts-sec-para">Voy members see an average increase of 296% in total testosterone</p></div><div class="charts-grid-image"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035b3fe42590e3a67c2c85_Line%20Chart%20-%20TRT.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035b3fe42590e3a67c2c85_Line%20Chart%20-%20TRT-p-500.png 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035b3fe42590e3a67c2c85_Line%20Chart%20-%20TRT.avif 1470w" alt="Voy chart" class="charts-grid-img"></div></div></div></div><div class="partnership-logo-div"><div class="partnership-logo-text">In collaboration with leading educational and research institutions</div><div class="swiper partnership-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div class="swiper-wrapper" id="swiper-wrapper-187d46e2854e10c73" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide partnership-slide swiper-slide-active" role="group" aria-label="1 / 5" style="margin-right: 70px;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb84fe2c3b1b7ea6248702_Imperial%20logo.svg" alt="Imperial logo" class="partnership-slide-img"></div><div class="swiper-slide partnership-slide swiper-slide-next" role="group" aria-label="2 / 5" style="margin-right: 70px;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb84fe2c3b1b7ea6248705_University_of_Oxford%20(1)%202.svg" alt="University of Oxford logo" class="partnership-slide-img"></div><div class="swiper-slide partnership-slide" role="group" aria-label="3 / 5" style="margin-right: 70px;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb84fe2c3b1b7ea6248704_uob-logo%202.svg" alt="UOB logo" class="partnership-slide-img"></div><div class="swiper-slide partnership-slide" role="group" aria-label="4 / 5" style="margin-right: 70px;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb84fe2c3b1b7ea6248703_UFMG%202.svg" alt="UFMG logo" class="partnership-slide-img"></div><div class="swiper-slide partnership-slide" role="group" aria-label="5 / 5" style="margin-right: 70px;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb84fe2c3b1b7ea6248701_ulster-university%202.svg" alt="Ulster University" class="partnership-slide-img"></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="code w-embed w-script"><style>
+.swiper.partnership-swiper {
+	width: 100%;
+	overflow: visible;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  var partnerSwiper = new Swiper(".partnership-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 60,
+    breakpoints: {
+      478: {
+        spaceBetween: 70,
+      },
+    },
+  });
+});
+</script></div></div></div><div class="science-grad"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7ad8f02d2b2d5f7fd975_Gradient%20block%201.avif" alt="" class="section-dark-gradient-image" style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 1.25, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></div></section><section class="effective-programmes-sec"><div class="container pad-120"><div class="sec-heading-w-arrows mob-centered"><div class="sec-heading-texts has-less-width"><h2>Thoughtful healthcare that <span class="text-green">feels personal, not clinical</span></h2></div><div class="sec-heading-arrows effective-prog-arrows"><div class="arrow-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-676342bde7e96f89" aria-disabled="true"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div><div class="arrow-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-676342bde7e96f89" aria-disabled="false"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div></div></div><div class="swiper effective-prog-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div class="swiper-wrapper" id="swiper-wrapper-676342bde7e96f89" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide effective-prog-card swiper-slide-active" role="group" aria-label="1 / 5" style="margin-right: 12px;"><div class="effective-prog-card-thumb"><div class="effective-prog-card-texts"><div class="section-tag">Treatment</div><div>Clinically proven treatments, safely prescribed</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c208f7484ff24707f7f_How%20it%20works%20-%20Treatment.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c208f7484ff24707f7f_How%20it%20works%20-%20Treatment-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c208f7484ff24707f7f_How%20it%20works%20-%20Treatment.avif 788w" alt="Treatment" class="effective-prog-card-img"></div><div class="effective-prog-card-title">Access science-backed treatments and custom formulations, proven to work based on research.</div></div><div class="swiper-slide effective-prog-card swiper-slide-next" role="group" aria-label="2 / 5" style="margin-right: 12px;"><div class="effective-prog-card-thumb"><div class="effective-prog-card-texts"><div class="section-tag">Care</div><div>Access to our team of clinicians</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2011230b9ab91d4abd_How%20it%20works%20-%20care.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2011230b9ab91d4abd_How%20it%20works%20-%20care-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2011230b9ab91d4abd_How%20it%20works%20-%20care.avif 788w" alt="care" class="effective-prog-card-img"></div><div class="effective-prog-card-title">Get human support via our app, phone or email, tailored to your needs.</div></div><div class="swiper-slide effective-prog-card" role="group" aria-label="3 / 5" style="margin-right: 12px;"><div class="effective-prog-card-thumb"><div class="effective-prog-card-texts"><div class="section-tag">App</div><div>Companion app to help you on your journey</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/699cbb0277d4ccfabf4f9e4e_photo_2026-02-23_18-29-50%20(1).jpg" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/699cbb0277d4ccfabf4f9e4e_photo_2026-02-23_18-29-50%20(1)-p-500.jpg 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/699cbb0277d4ccfabf4f9e4e_photo_2026-02-23_18-29-50%20(1).jpg 788w" alt="Voy app" class="effective-prog-card-img"></div><div class="effective-prog-card-title">Track your progress and chat to your team with an app that keeps your journey moving in the right direction.</div></div><div class="swiper-slide effective-prog-card" role="group" aria-label="4 / 5" style="margin-right: 12px;"><div class="effective-prog-card-thumb"><div class="effective-prog-card-texts"><div class="section-tag">Support</div><div>24/7 support powered by our AI, Joy</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c1f87e6beb3b1456521_How%20it%20works%20-%20Diagnostics.avif" loading="lazy" alt="Support" class="effective-prog-card-img"></div><div class="effective-prog-card-title">Get instant help from your dedicated team, day or night. Message AI-powered Joy for answers, fast.</div></div><div class="swiper-slide effective-prog-card" role="group" aria-label="5 / 5" style="margin-right: 12px;"><div class="effective-prog-card-thumb"><div class="effective-prog-card-texts"><div class="section-tag">Diagnostics</div><div>Comprehensive diagnostics</div></div><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2055e43cb01b8ba928_How%20it%20works%20-%20app.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2055e43cb01b8ba928_How%20it%20works%20-%20app-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/69035c2055e43cb01b8ba928_How%20it%20works%20-%20app.avif 788w" alt="Diagnostics" class="effective-prog-card-img"></div><div class="effective-prog-card-title">Access a set of at-home and in-clinic blood tests to understand your health and take action.</div></div></div><div class="effective-prog-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="w-embed"><style>
+.effective-prog-card:nth-child(1) .effective-prog-card-thumb {
+	background: linear-gradient(104deg, rgba(255,168,124,0.5) 0%, rgba(228,225,216,0.5) 140%, rgba(228,225,216,0.5) 230%, rgba(173,190,196,0.5) 400%);
+}
+.effective-prog-card:nth-child(2) .effective-prog-card-thumb {
+	background: linear-gradient(104deg, rgba(255,168,124,0.5) -100%, rgba(228,225,216,0.5) 80%, rgba(228,225,216,0.5) 190%, rgba(173,190,196,0.5) 400%);
+}
+.effective-prog-card .effective-prog-card-thumb {
+	background: linear-gradient(104deg, rgba(255,168,124,0.5) -200%, rgba(228,225,216,0.5) -20%, rgba(228,225,216,0.5) 90%, rgba(173,190,196,0.5) 300%);
+}
+.effective-prog-card:nth-child(4) .effective-prog-card-thumb {
+	background: linear-gradient(104deg, rgba(255,168,124,0.5) -300%, rgba(228,225,216,0.5) -120%, rgba(228,225,216,0.5) -10%, rgba(173,190,196,0.5) 200%);
+}
+.effective-prog-card:nth-child(5) .effective-prog-card-thumb {
+	background: linear-gradient(104deg, rgba(228,225,216,0.5) -130%, rgba(173,190,196,0.5) 50%);
+}
+</style></div><div class="code w-embed w-script"><style>
+.swiper.effective-prog-swiper {
+	width: 100%;
+	overflow: visible;
+}
+.effective-prog-pagination .swiper-pagination-bullet  {
+	margin: 0 !important;
+	opacity: 1;
+  background: #E4E1D8;
+}
+.effective-prog-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: #19301E;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  var medicalWideSwiper = new Swiper(".effective-prog-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 12,
+    pagination: { el: ".effective-prog-pagination" },
+    navigation: { 
+      prevEl: ".effective-prog-arrows .arrow-prev",
+      nextEl: ".effective-prog-arrows .arrow-next" 
+    },
+  });
+});
+</script></div></div></section><section class="testimonials-sec"><div class="container pad-120"><div class="testimonial-wide-contain"><div class="sec-heading-w-arrows mob-centered"><div class="sec-heading-texts has-less-width"><div class="section-tag">Testimonials</div><h2>Their words, not ours</h2></div><div class="sec-heading-arrows testimonials-large-arrows"><div class="arrow-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-89219be2474c0fe4" aria-disabled="true"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div><div class="swiper testi-l-thumbs swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-watch-progress swiper-thumbs"><div class="swiper-wrapper" id="swiper-wrapper-6f3f976e77acbf02" aria-live="polite" style="transition-duration: 0ms;"><div class="swiper-slide testi-thumb"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile.avif 1160w" alt="Weight loss" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile.avif" loading="lazy" class="testi-thumb-img"></div><div class="swiper-slide testi-thumb ab-test"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5fc_testimonial-trt-stephen-avatar.webp" alt="Stephen" class="testi-thumb-img"></div><div class="swiper-slide testi-thumb"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile.avif 1160w" alt="Weight loss" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile.avif" loading="lazy" class="testi-thumb-img"></div><div class="swiper-slide testi-thumb"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile.avif 1160w" alt="Menopause" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile.avif" loading="lazy" class="testi-thumb-img"></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="arrow-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-89219be2474c0fe4" aria-disabled="false"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div></div></div><div class="swiper testimonials-large-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div class="swiper-wrapper" id="swiper-wrapper-89219be2474c0fe4" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide testimonial-large swiper-slide-active" role="group" aria-label="1 / 4" style="margin-right: 24px;"><div class="testimonial-large-texts"><div class="testi-l-blur color-wl"></div><div class="testi-l-stat">22kg</div><div class="testi-l-text-1">Weight lost</div><p class="testi-l-review">“With Voy, I lost 22kg in under a year. <span class="text-green">Voy helped me rebuild my confidence. I've never felt stronger. ”</span></p><div class="testi-l-footer"><div class="testi-l-name-info"><div class="testi-l-name-texts"><div class="testi-l-name-text-1">Amy</div><div>Weight Loss</div></div><div class="testi-info-mark"></div></div></div></div><div class="testimonial-large-image"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae8c4cd3a802f57e86_testimonial_02_desktop.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae8c4cd3a802f57e86_testimonial_02_desktop-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae8c4cd3a802f57e86_testimonial_02_desktop-p-800.avif 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae8c4cd3a802f57e86_testimonial_02_desktop.avif 1530w" alt="Weight loss" class="testi-l-img for-desktop"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aef21c8a566ed4e293_testimonial_02_mobile.avif 1160w" alt="Weight loss" class="testi-l-img for-mobile"></div></div><div class="swiper-slide testimonial-large ab-test swiper-slide-next" role="group" aria-label="2 / 4" style="margin-right: 24px;"><div class="testimonial-large-texts"><div class="testi-l-blur"></div><div class="testi-l-stat">145%</div><div class="testi-l-text-1">increase in Free Testosterone</div><p class="testi-l-review">"The whole journey has been life changing. I feel better within myself, and I know that people around me are starting to benefit from that —&nbsp;it’s been a big game changer."</p><div class="testi-l-footer"><div class="testi-l-tags"><div class="testi-l-tag">Decreased weight</div><div class="testi-l-tag">Brain fog lifted</div></div><div class="testi-l-name-info"><div class="testi-l-name-texts"><div class="testi-l-name-text-1">Stephen</div><div>Testosterone</div></div><div class="testi-info-mark for-trt"></div></div></div></div><div class="testimonial-large-bento"><div data-disablescroll="" data-video="https://cdn.joinvoy.com/webflow/trt/video/Testimonials/Belfast/01_Testomonial_Belfast_1920x1080.mp4" data-video-mob="https://cdn.joinvoy.com/webflow/trt/video/Testimonials/Belfast/01_Testomonial_Belfast_720_1280.mp4" class="testi-l-box span-2"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b1_ico-play-ButtonVideo.svg" alt="Play" class="testi-l-box-play"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video-p-500.webp 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video-p-800.webp 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video-p-1080.webp 1080w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video-p-1600.webp 1600w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video-p-2000.webp 2000w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video.webp 2304w" alt="Stephen" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5f3_bento-testimonial-trt-stephen-video.webp" loading="lazy" class="testi-l-box-img"></div><div class="testi-l-box"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5d5_bento-testimonial-trt-stephen-profile-p-500.webp 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5d5_bento-testimonial-trt-stephen-profile-p-800.webp 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5d5_bento-testimonial-trt-stephen-profile-p-1080.webp 1080w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5d5_bento-testimonial-trt-stephen-profile.webp 1140w" alt="Stephen" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5d5_bento-testimonial-trt-stephen-profile.webp" loading="lazy" class="testi-l-box-img"></div><div class="testi-l-box"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc600_stephen-chart-1-5-months.svg" alt="chart" class="testi-l-box-chart"><img sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5cd_ecded7edcd737dc792de210dfa7d2341_bento-testimonial-trt-stephen-chart-p-500.webp 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5cd_ecded7edcd737dc792de210dfa7d2341_bento-testimonial-trt-stephen-chart-p-1080.webp 1080w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5cd_bento-testimonial-trt-stephen-chart.webp 1140w" alt="chart" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5cd_bento-testimonial-trt-stephen-chart.webp" loading="lazy" class="testi-l-box-img-bg"></div></div></div><div class="swiper-slide testimonial-large" role="group" aria-label="3 / 4" style="margin-right: 24px;"><div class="testimonial-large-texts"><div class="testi-l-blur color-wl"></div><div class="testi-l-stat">31kg</div><div class="testi-l-text-1">Weight lost</div><p class="testi-l-review">"With Voy, it’s not just about losing weight, <span class="text-green">it’s about keeping the weight off for good. That’s the best thing about it."</span></p><div class="testi-l-footer"><div class="testi-l-name-info"><div class="testi-l-name-texts"><div class="testi-l-name-text-1">Stephen</div><div>Weight Loss</div></div><div class="testi-info-mark"></div></div></div></div><div class="testimonial-large-image"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379af146641709f7d89ce_testimonial_01_desktop.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379af146641709f7d89ce_testimonial_01_desktop-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379af146641709f7d89ce_testimonial_01_desktop-p-800.avif 800w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379af146641709f7d89ce_testimonial_01_desktop.avif 1530w" alt="Weight loss" class="testi-l-img for-desktop"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae6bbe13462d6d9875_testimonial_01_mobile.avif 1160w" alt="Weight loss" class="testi-l-img for-mobile"></div></div><div class="swiper-slide testimonial-large" role="group" aria-label="4 / 4" style="margin-right: 24px;"><div class="testimonial-large-texts"><div class="testi-l-blur color-mp"></div><p class="testi-l-review">It was the first time in 24 years of fighting this battle that I felt safe. She made the space entirely safe. <span class="text-green">She not only listened to everything I said, she encouraged me to say more — which is very rare.</span></p><div class="testi-l-footer"><div class="testi-l-name-info"><div class="testi-l-name-texts"><div class="testi-l-name-text-1">Charlotte</div><div>Menopause</div></div><div class="testi-info-mark for-mp"></div></div></div></div><div class="testimonial-large-image"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aeab7dfb4f1d39800d_testimonial_03_desktop.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aeab7dfb4f1d39800d_testimonial_03_desktop-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379aeab7dfb4f1d39800d_testimonial_03_desktop.avif 1530w" alt="Menopause" class="testi-l-img for-desktop"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile.avif" loading="lazy" sizes="100vw" srcset="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile-p-500.avif 500w, https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/690379ae59d60d376f6e19b2_testimonial_03_mobile.avif 1160w" alt="Menopause" class="testi-l-img for-mobile"></div></div></div><div class="testimonials-large-pagination swiper-pagination-progressbar swiper-pagination-horizontal"><span class="swiper-pagination-progressbar-fill" style="transform: translate3d(0px, 0px, 0px) scaleX(0.25) scaleY(1); transition-duration: 300ms;"></span></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="code w-embed w-script"><style>
+.swiper-slide.testi-thumb::before {
+	content: '';
+  position: absolute;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 5px 3px rgba(0,0,0,0.05);
+  z-index: -1;
+  opacity: 0;
+}
+.swiper-slide.testi-thumb.swiper-slide-thumb-active::before {
+	opacity: 1;
+}
+
+.swiper.testimonials-large-swiper {
+	width: 100%;
+  overflow: visible;
+}
+.testimonials-large-pagination {
+	position: relative !important;
+  background: #E4E1D8 !important;
+  height: 2px !important;
+}
+.testimonials-large-pagination .swiper-pagination-progressbar-fill {
+  background: #19301E !important;
+  height: 2px !important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slideLThumbs = new Swiper(".testi-l-thumbs", {
+    slidesPerView: "auto",
+    spaceBetween: 8,
+    threshold: 12,
+    freeMode: true,
+    watchSlidesProgress: true,
+    centerInsufficientSlides: true,
+  });
+  const testiLSwiper = new Swiper(".testimonials-large-swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    pagination: { 
+      el: ".testimonials-large-pagination",
+      type: "progressbar",  
+    },
+    navigation: { 
+      prevEl: ".testimonials-large-arrows .arrow-prev",
+      nextEl: ".testimonials-large-arrows .arrow-next" 
+    },
+    thumbs: { swiper: slideLThumbs },
+  });
+});
+</script></div></div></div></section><section class="do-health-sec"><div class="container pad-120-top"><div class="do-health-sec-content"><div class="app-icon-prod"></div><div class="do-health-block"><h2 class="do-health-heading">Do Health</h2><div class="do-health-paragraph">Your personal companion app, powered by your biology and lifestyle. </div><div class="do-health-author"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697b4b57462ae2e93767aa09_dr-rangan.png" loading="lazy" width="33" height="33" alt="" class="profile-rangan"><div class="author-text">Co-founded with Dr Rangan Chatterjee</div></div></div><div class="do-health-sec-cta"><a href="https://dohealth.co/" target="_blank" class="btn-secondary w-button">Learn more</a></div></div><div class="do-health-sec-images"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697b4d9802bb3ef63089cd85_4ddceae05ab2cc2ebfd9ad42722494d2_do-health-desktop-transparent.webp" loading="lazy" width="911" alt="Do health" class="do-health-sec-img for-desktop"><img src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/697b4f19b6049f34bbc1796e_do-health-mobile-transparent.webp" loading="lazy" width="911" alt="Do health" class="do-health-sec-img for-mob"></div></div></section><section class="medical-team-wide-sec"><div class="container pad-120-top"><div class="sec-heading-w-arrows mob-centered"><div class="sec-heading-texts has-less-width"><h2>Your health, in the hands of leading medical experts</h2></div><div class="sec-heading-arrows medical-wide-arrows"><div class="arrow-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-b60f10f87971005d5f" aria-disabled="true"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div><div class="arrow-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-b60f10f87971005d5f" aria-disabled="false"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb7860209f0416ac0cc5b0_ico-caret-right.svg" alt="Caret" class="arrow-ico"></div></div></div><div id="medical-wide-swiper" class="swiper medical-wide-swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"><div class="swiper-wrapper" id="swiper-wrapper-b60f10f87971005d5f" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);"><div class="swiper-slide medical-wide-card swiper-slide-active" role="group" aria-label="1 / 3" style="margin-right: 16px;"><div class="medical-wide-thumb"><img width="800" loading="lazy" alt="Earim Chaudry" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6903768ed19c85d1f9c8286b_Earim%20Chaudry%201600x1000.avif" class="medical-wide-pic"><a href="https://www.joinvoy.com/experts/dr-earim-chaudry?manualSid=S-LF3ehgDkyG" target="_blank" class="medical-wide-bio-btn w-inline-block"><div class="medical-wide-bio-btn-text">Read full bio</div><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb78cc78f0debdb140ff95_ico-Plus-basic.svg" alt="Plus" class="medical-wide-bio-btn-ico"></a></div><div class="medical-wide-info"><div class="medical-wide-info-texts"><div class="medical-wide-info-name">Earim Chaudry</div><div>Chief Medical Officer</div></div><p class="medical-wide-info-para">Dr Earim Chaudry is a highly accomplished digital health doctor with extensive experience in the field of online and telemedicine-based healthcare. Over the years, he has played a pivotal role in shaping the landscape of digital healthcare in the UK, holding leadership positions at some of the country’s largest and most recognised digital health companies.</p></div></div><div class="swiper-slide medical-wide-card swiper-slide-next" role="group" aria-label="2 / 3" style="margin-right: 16px;"><div class="medical-wide-thumb"><img width="800" loading="lazy" alt="Jeff" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6903768e2b0b729cb075bafb_Jeff%201600x1000.avif" class="medical-wide-pic"><a href="https://www.joinvoy.com/experts/dr-jeff-foster?manualSid=S-LF3ehgDkyG" target="_blank" class="medical-wide-bio-btn w-inline-block"><div class="medical-wide-bio-btn-text">Read full bio</div><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb78cc78f0debdb140ff95_ico-Plus-basic.svg" alt="Plus" class="medical-wide-bio-btn-ico"></a></div><div class="medical-wide-info"><div class="medical-wide-info-texts"><div class="medical-wide-info-name">Jeff Foster</div><div class="text-block">Medical Director, Men’s Health</div></div><p class="medical-wide-info-para">Jeff is an NHS GP Partner, and Private GP with high specialisation in Men’s Health. He is a committee member of the British Society of Sexual Medicine, and has been involved in writing the most recent national guidelines for testosterone deficiency in men.</p></div></div><div class="swiper-slide medical-wide-card" role="group" aria-label="3 / 3" style="margin-right: 16px;"><div class="medical-wide-thumb"><img width="800" loading="lazy" alt="David" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6903768e70cd91ce25ec2c91_David%201600x1000.avif" class="medical-wide-pic"></div><div class="medical-wide-info"><div class="medical-wide-info-texts"><div class="medical-wide-info-name">David Huang</div><div class="text-block">Director of Clinical Innovation</div></div><p class="medical-wide-info-para">David leads on clinical strategy and innovation, including clinical research, development of new products and opening new markets. His focus is integrating clinical innovation with business strategy.</p></div></div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div><div class="medical-wide-pagination swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" aria-current="true"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div><div class="code w-embed w-script"><style>
+.swiper.medical-wide-swiper {
+	width: 100%;
+	overflow: visible;
+}
+.medical-wide-pagination .swiper-pagination-bullet  {
+	margin: 0 !important;
+	opacity: 1;
+  background: #E4E1D8;
+}
+.medical-wide-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: #19301E;
+}
+
+  .arrow-prev.swiper-button-disabled,
+  .arrow-next.swiper-button-disabled {
+    opacity: 0.5;
+  }
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  var medicalWideSwiper = new Swiper("#medical-wide-swiper", {
+    //slidesPerView: 1,
+    slidesPerView: "auto",
+  //  centeredSlides: true,
+   // loop: true,
+    //loopSlides: 1,
+    //cssMode: true,
+    spaceBetween: 16,
+    pagination: { el: ".medical-wide-pagination" },
+    navigation: { 
+      prevEl: ".medical-wide-arrows .arrow-prev",
+      nextEl: ".medical-wide-arrows .arrow-next" 
+    },
+  });
+});
+</script></div></div><div class="container pad-120-bottom"><div class="partner-marquee"><div class="partnership-logo-text-2">In partnership with leading educational and research institutions</div><div class="partner-marquee-wrap"><div class="partner-marquee-all" style="flex-direction: row; animation: 15s linear 0s infinite normal forwards running marquee;"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d511_logo-bl-imperial.svg" alt="imperial" class="partner-marquee-img"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d50f_logo-bl-University_of_Oxford%20(1)%202.svg" alt="University_of_Oxford" class="partner-marquee-img type-2"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d510_logo-bl-uob.svg" alt="UOB" class="partner-marquee-img type-3"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d50e_logo-bl-UFMG.svg" alt="UFMG" class="partner-marquee-img type-3"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb85ce75c72f4adb7ab367_Logo-bl-ulster-university-02.svg" alt="Ulster University" class="partner-marquee-img type-4"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d511_logo-bl-imperial.svg" alt="imperial" class="partner-marquee-img"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d50f_logo-bl-University_of_Oxford%20(1)%202.svg" alt="University_of_Oxford" class="partner-marquee-img type-2"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d510_logo-bl-uob.svg" alt="UOB" class="partner-marquee-img type-3"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb856e2006c976b231d50e_logo-bl-UFMG.svg" alt="UFMG" class="partner-marquee-img type-3"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb85ce75c72f4adb7ab367_Logo-bl-ulster-university-02.svg" alt="Ulster University" class="partner-marquee-img type-4"></div></div><div class="w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const partnerMarquee = document.querySelector('.partner-marquee-all');
+  const marqueePDuration = partnerMarquee.childElementCount * 3;
+  const allPChildren = partnerMarquee.childNodes;
+  partnerMarquee.style.flexDirection = 'row';
+  partnerMarquee.style.animation = 'marquee 12s linear infinite forwards';
+
+  allPChildren.forEach((hero) => {
+    let clone = hero.cloneNode(true);
+    partnerMarquee.appendChild(clone);
+  });
+  partnerMarquee.style.animationDuration = `${marqueePDuration}s`;
+});
+</script></div></div></div></section><section class="cta-box-section"><div class="container"><div class="cta-box-contain"><h2 class="h2-big">Make today life changing</h2><p class="cta-box-para">Take a step towards better health with expert-led care from Voy.</p><div class="cta-box-cta-div"><div data-w-id="513d2266-579f-02ea-f5df-914c1751823e" class="btn-secondary">Explore our treatment areas</div></div></div></div><div class="cta-box-video"><div class="w-embed"><video width="100%" autoplay="true" loop="true" muted="true" playsinline="" class="cta-box-video">
+    <source src="https://cdn.joinvoy.com/voyage/video/voytex-MIX-homepage-desktop.mp4" type="video/mp4">
+</video></div></div></section><footer class="footer"><div class="container"><div class="w-embed"><style>
+/* footer styles */
+.footer-link-group:first-of-type {
+	border-top: 0;
+}
+.footer-link-group.active .faq-plus-v {
+  opacity: 0;
+}
+</style></div><div class="footer-top"><div class="footer-top-left"><div class="footer-heading">Have a question?</div><div class="footer-ctas"><a data-experiment="px-footer-phone-number-split" href="tel:07380169186" class="footer-cta w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1ab_ico-phone-01.svg" alt="Phone" class="footer-cta-ico"><div class="footer-top-text"><div href="#" data-experiment="px-footer-phone-number-split" class="text-medium">073 8016 9186</div>Monday - Friday 9am - 5pm<br></div></a><a href="mailto:help@joinvoy.com" class="footer-cta w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a9_ico-chat-01.svg" alt="Chat" class="footer-cta-ico"><div class="footer-top-text"><span class="text-medium">help@joinvoy.com</span><br>We aim to reply in 24 hours<br></div></a><a href="mailto:press@joinvoy.com" class="footer-cta w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1aa_ico-email-01.svg" alt="Email" class="footer-cta-ico"><div class="footer-top-text"><span class="text-medium">press@joinvoy.com</span><br>Press &amp; media inquiries<br></div></a></div><div class="footer-buttons"><div class="footer-button-div"><a data-experiment="px-footer-phone-number-split" href="tel:07380169186" class="footer-button-text">Call us</a><div>Mon - Fri 9am - 5pm</div></div><div class="footer-button-div"><a href="mailto:help@joinvoy.com" class="footer-button-text">Email us</a><div>We aim to reply in 48hrs</div></div></div><div class="footer-top-text-2">Our services are not intended for use in a medical emergency. If you need urgent medical attention, please call 111 or 999</div></div><div class="footer-top-right"><div class="footer-link-group"><div class="footer-heading"><div>Women</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="/weight-loss" class="footer-link">Weight Loss</a><a href="/menopause" class="footer-link">Menopause</a></div></div><div class="footer-link-group"><div class="footer-heading"><div>Men</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="/hair-loss" class="footer-link">Hair Loss</a><a href="/weight-loss" class="footer-link">Weight Loss</a><a href="/trt" class="footer-link">Testosterone</a></div></div><div class="footer-link-group"><div class="footer-heading"><div>Prevention</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="https://dohealth.co/?utm_medium=referral&amp;utm_source=voy&amp;utm_content=footer" class="footer-link">Do Health</a></div></div><div class="footer-link-group"><div class="footer-heading"><div>Voy</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="/medical-expertise" class="footer-link">Meet the experts</a><a href="/sitemap" class="footer-link">Sitemap</a><a href="https://careers.joinvoy.com/?manualSid=S-LF3ehgDkyG" target="_blank" class="footer-link">Careers</a></div></div><div class="footer-link-group"><div class="footer-heading"><div>Legal</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="/pages/privacy" class="footer-link">Privacy policy</a><a href="/pages/terms" class="footer-link">Terms &amp; Conditions</a><a href="/pages/terms-of-sale" class="footer-link">Terms of Sale</a><a href="/pages/complaints" class="footer-link">Complaints</a><a href="#" data-manage-cookies-link="true" class="footer-link">Manage Cookies</a></div></div><div class="footer-link-group"><div class="footer-heading"><div>Get help</div><div class="faq-plus footer-heading-ico"><div class="faq-plus-h"></div><div class="faq-plus-v"></div></div></div><div class="footer-links" style="max-height: 0px;"><a href="https://joinvoy.zendesk.com/hc/en-gb?manualSid=S-LF3ehgDkyG" class="footer-link">Help Centre (FAQ)</a></div></div></div></div><div class="footer-bottom"><div class="footer-socials"><a href="https://menopause.joinvoy.com/?manualSid=S-LF3ehgDkyG" class="footer-ico w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a0_Voy%20Wordmark%2010.06.51%E2%80%AFPM.svg" alt="Voy" class="footer-logo"></a><a href="https://www.facebook.com/profile.php?id=61552209105276" target="_blank" class="footer-ico w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a1_ico-Social-facebook.svg" alt="Facebook" class="footer-ico-ico"></a><a href="https://www.instagram.com/joinvoy/?manualSid=S-LF3ehgDkyG" target="_blank" class="footer-ico w-inline-block"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a2_ico-Social-instagram.svg" alt="Instagram" class="footer-ico-ico"></a></div><div class="footer-copy-text"><div class="footer-text-small">Copyright <span id="footerYear">2026</span> Voy. All rights reserved.</div></div><div class="footer-bottom-bottom"><div class="footer-text-small">Pharmacies: Voy Pharmacy<br>Superintendent Pharmacist: Dawn Olivia Neil<br>GPhC Registration: 2063362</div><div class="footer-logos"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/6980721e40def08f5fdf6301_GPhC-Registration-9012909.avif" alt="" class="footer-logo-img"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a4_CQCRatingNew.avif" alt="Regulated" class="footer-logo-img"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb630fae8e3f8764dfe1a7_CPDMember.avif" alt="CPD" class="footer-logo-img"></div></div></div><div class="code w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", () => {
+	// Footer year
+  const footerYear = document.querySelector('#footerYear');
+  const currentYear = new Date().getFullYear();
+  footerYear.textContent = currentYear;
+
+  // Footer accordion
+  const footerAccs = document.querySelectorAll('.footer-link-group');
+  footerAccs.forEach((acc) => {
+    const ac = acc.querySelector('.footer-links');
+    ac.style.maxHeight = 0;
+  });
+  const checkActiveParaF = (acc) => {
+    const aContent = acc.querySelector('.footer-links');
+    if (acc.classList.contains('active')) {
+      aContent.style.maxHeight = `${aContent.scrollHeight}px`;
+    } else {
+      aContent.style.maxHeight = 0;
+    }
+  };
+  footerAccs.forEach((acc) => {
+    const aTab = acc.querySelector('.footer-heading');
+    checkActiveParaF(acc);
+    aTab.addEventListener('click', (e) => {
+      acc.classList.toggle('active');
+      checkActiveParaF(acc);
+    });
+  });
+});
+</script></div></div></footer><div class="video-modal"><div class="w-embed"><style>
+.video-modal {
+	opacity: 0;
+  visibility: hidden;
+}
+.video-modal.show {
+  visibility: visible;
+	opacity: 1;
+}
+</style></div><div data-enablescroll="" class="vid-modal-close"><img loading="lazy" src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/68fb78863ebff1362df0a350_ico-close-2.svg" alt="close" class="modal-close"></div><div class="vid-modal-contain"><div class="hero-vid-modal-embed w-embed"><video width="100%" height="100%" controls="" autoplay="" playsinline="" src=""></video></div></div><div class="w-embed w-script"><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const vidSlides = document.querySelectorAll('[data-video]');
+  const vidModal = document.querySelector('.video-modal');
+  const videoElem = vidModal.querySelector('video');
+  const closeVidModal = vidModal.querySelector('.vid-modal-close');
+  vidSlides.forEach((slide) => {
+    slide.addEventListener('click', (e) => {
+      videoElem.src = e.currentTarget.dataset.video;
+      if (e.currentTarget.hasAttribute('data-video-mob')) {
+      	const isMobile = window.matchMedia("(max-width: 768px)");
+        if (isMobile.matches) videoElem.src = e.currentTarget.dataset.videoMob;
+      }
+      vidModal.classList.add('show');
+      videoElem.play();
+    });
+  });
+  closeVidModal.addEventListener('click', () => {
+    vidModal.classList.remove('show');
+    videoElem.src = '';
+  });
+});
+</script></div></div><script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68fb58dee9b721a422eb1fa3" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/js/joinvoy.schunk.36b8fb49256177c8.js" type="text/javascript" integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/js/joinvoy.schunk.ed7f30218fd58b00.js" type="text/javascript" integrity="sha384-yGE0Z2VvfcTYTMAja2A/4rZNy3pVdEJEh7WgxovNWL6rbZLjgfuJpzp9JY8EmX9q" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/68fb58dee9b721a422eb1fa3/js/joinvoy.a9ed06db.847c0458196a1343.js" type="text/javascript" integrity="sha384-pLNhkCjVMUAuYKVPz66H1MGDZVyQse6mN/t93M1chP8i1SROQyiyTVHI74VVM+1b" crossorigin="anonymous"></script><script src="https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js" type="text/javascript"></script><script src="https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js" type="text/javascript"></script><script type="text/javascript">gsap.registerPlugin(ScrollTrigger,SplitText);</script><script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script>
+//DISABLE WEBFLOW SMOOTH SCROLL
+var Webflow = Webflow || [];
+Webflow.push(function() {
+  $(function() {
+      $(document).off('click.wf-scroll');
+  });
+});
+  
+  
+// Scroll navbar
+let scrollPos = 0; // Initial state
+let docElement = document.documentElement;
+let didScroll = false;
+const navbar = document.querySelector('.header');
+
+function scrollPage() {
+  var yaxis = window.pageYOffset || docElement.scrollTop;
+  if (yaxis >= 24) { // 24px offset
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  didScroll = false;
+}
+window.addEventListener('scroll', function () {
+  if (!didScroll) {
+    didScroll = true;
+    setTimeout(scrollPage, 50);
+  }
+});
+  
+  
+// Menu open/close disable/enable scroll
+const openBtns = document.querySelectorAll('[data-disablescroll]');
+const closeBtns = document.querySelectorAll('[data-enablescroll]');
+openBtns.forEach(opBtn => {
+  opBtn.addEventListener('click', () => {
+    document.body.classList.add('no-scroll');
+  });
+});
+closeBtns.forEach(clBtn => {
+  clBtn.addEventListener('click', () => {
+    document.body.classList.remove('no-scroll');
+  });
+});
+  
+  
+// Accordions
+if (document.querySelector('.accordion')) {
+  const accordions = document.querySelectorAll('.accordion');
+
+  const setMaxHeight = (acc, open) => {
+    const content = acc.querySelector('.accordion-content');
+    if (!content) return;
+    content.style.maxHeight = open ? `${content.scrollHeight}px` : '0px';
+  };
+
+  // Init: collapsed unless already .active
+  accordions.forEach(acc => {
+    const content = acc.querySelector('.accordion-content');
+    if (content) content.style.maxHeight = '0px';
+    if (acc.classList.contains('active')) setMaxHeight(acc, true);
+
+    const tab = acc.querySelector('.accordion-tab');
+    if (!tab) return;
+
+    tab.addEventListener('click', () => {
+      const accGroup = acc.closest('.accordion-container');
+
+      // Close all other accordions in the same group
+      if (accGroup) {
+        accGroup.querySelectorAll('.accordion').forEach(other => {
+          if (other !== acc) {
+            other.classList.remove('active');
+            setMaxHeight(other, false);
+          }
+        });
+      }
+
+      // Toggle clicked accordion
+      acc.classList.toggle('active');
+      setMaxHeight(acc, acc.classList.contains('active'));
+    });
+  });
+}
+
+
+// Floating element
+function floatingElem (stickyElem, showAfter) {
+  const docElement = document.documentElement;
+  let didScroll = false;
+
+  function scrollPage2() {
+    const yaxis = window.pageYOffset || docElement.scrollTop;
+    if (yaxis >= showAfter) {
+      stickyElem.classList.add('scrolled');
+    } else {
+      stickyElem.classList.remove('scrolled');
+    }
+    didScroll = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!didScroll) {
+      didScroll = true;
+      setTimeout(scrollPage2, 50);
+    }
+  });
+}
+if (document.querySelector('#floating-cta')) {
+  const floatingCta = document.querySelector('#floating-cta');
+  let showStickyAfter = window.innerHeight;
+  if (floatingCta.dataset.showafter) {
+    const targetEl = document.getElementById(floatingCta.dataset.showafter);
+    if (targetEl) {
+      showStickyAfter = targetEl.getBoundingClientRect().top + window.scrollY - window.innerHeight / 2;
+    } else console.log(`Floating CTA error: "${floatingCta.dataset.showafter}" is not a proper ID!`);
+  }
+  floatingElem(floatingCta, showStickyAfter);
+  //console.log(showStickyAfter);
+  
+  if (document.querySelector('#popup-button')) {
+  	const floatingGift = document.querySelector('#popup-button');
+    floatingElem(floatingGift, showStickyAfter);
+  }
+}
+  
+// Scroll to section
+if (document.querySelector("[data-scrollto-link]")) {
+  const allScrollLinks = document.querySelectorAll("[data-scrollto-link]");
+
+  allScrollLinks.forEach(link => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const scrollSectionId = event.currentTarget.getAttribute("data-scrollto-link");
+      const scrollSectionElem = document.getElementById(scrollSectionId);
+
+      if (!scrollSectionElem) {
+        console.warn(`ScrollTo Warning: No section found with ID #${scrollSectionId}`);
+        return;
+      }
+
+      const headerElement = document.querySelector(".header");
+      const headerHeight = headerElement ? headerElement.offsetHeight : 0;
+
+      const sectionTop = scrollSectionElem.getBoundingClientRect().top + window.scrollY;
+      const scrollToPosition = sectionTop - headerHeight;
+
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth",
+      });
+    });
+  });
+}
+
+
+gsap.registerPlugin(SplitText);
+if (document.querySelector("[hero-split]")) {
+  document.fonts.ready.then(() => {
+    const heroTitles = document.querySelectorAll("[hero-split]");
+    heroTitles.forEach(title => {
+      const customSpeed = title.getAttribute("hero-split-speed");
+      const duration = customSpeed ? parseFloat(customSpeed) : 0.8;
+
+      let h1split = SplitText.create(title, {
+        type: "words",
+        wordsClass: "h1-word",
+      });
+      gsap.from(h1split.words, {
+        autoAlpha: 0,
+        filter: "blur(10px)",
+        duration: duration,
+        stagger: 0.15,
+      });
+    });
+  });
+}
+</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](467),d=google_tag_manager["rm"]["168933146"](468);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](523),d=google_tag_manager["rm"]["168933146"](524);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](579),d=google_tag_manager["rm"]["168933146"](580);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](635),d=google_tag_manager["rm"]["168933146"](636);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](691),d=google_tag_manager["rm"]["168933146"](692);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](747),d=google_tag_manager["rm"]["168933146"](748);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](803),d=google_tag_manager["rm"]["168933146"](804);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](859),d=google_tag_manager["rm"]["168933146"](860);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](915),d=google_tag_manager["rm"]["168933146"](916);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](971),d=google_tag_manager["rm"]["168933146"](972);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1027),d=google_tag_manager["rm"]["168933146"](1028);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1083),d=google_tag_manager["rm"]["168933146"](1084);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1139),d=google_tag_manager["rm"]["168933146"](1140);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1195),d=google_tag_manager["rm"]["168933146"](1196);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1251),d=google_tag_manager["rm"]["168933146"](1252);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1307),d=google_tag_manager["rm"]["168933146"](1308);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1363),d=google_tag_manager["rm"]["168933146"](1364);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1419),d=google_tag_manager["rm"]["168933146"](1420);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1475),d=google_tag_manager["rm"]["168933146"](1476);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1531),d=google_tag_manager["rm"]["168933146"](1532);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1587),d=google_tag_manager["rm"]["168933146"](1588);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1643),d=google_tag_manager["rm"]["168933146"](1644);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1699),d=google_tag_manager["rm"]["168933146"](1700);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1755),d=google_tag_manager["rm"]["168933146"](1756);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1811),d=google_tag_manager["rm"]["168933146"](1812);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1867),d=google_tag_manager["rm"]["168933146"](1868);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1923),d=google_tag_manager["rm"]["168933146"](1924);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](1979),d=google_tag_manager["rm"]["168933146"](1980);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2035),d=google_tag_manager["rm"]["168933146"](2036);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2091),d=google_tag_manager["rm"]["168933146"](2092);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2147),d=google_tag_manager["rm"]["168933146"](2148);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2203),d=google_tag_manager["rm"]["168933146"](2204);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2259),d=google_tag_manager["rm"]["168933146"](2260);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2315),d=google_tag_manager["rm"]["168933146"](2316);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2371),d=google_tag_manager["rm"]["168933146"](2372);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2427),d=google_tag_manager["rm"]["168933146"](2428);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2483),d=google_tag_manager["rm"]["168933146"](2484);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2539),d=google_tag_manager["rm"]["168933146"](2540);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2595),d=google_tag_manager["rm"]["168933146"](2596);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2651),d=google_tag_manager["rm"]["168933146"](2652);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2707),d=google_tag_manager["rm"]["168933146"](2708);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2763),d=google_tag_manager["rm"]["168933146"](2764);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2819),d=google_tag_manager["rm"]["168933146"](2820);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2875),d=google_tag_manager["rm"]["168933146"](2876);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2931),d=google_tag_manager["rm"]["168933146"](2932);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](2987),d=google_tag_manager["rm"]["168933146"](2988);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3043),d=google_tag_manager["rm"]["168933146"](3044);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3099),d=google_tag_manager["rm"]["168933146"](3100);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3155),d=google_tag_manager["rm"]["168933146"](3156);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3211),d=google_tag_manager["rm"]["168933146"](3212);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3267),d=google_tag_manager["rm"]["168933146"](3268);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">(function(){var a=google_tag_manager["rm"]["168933146"](3323),d=google_tag_manager["rm"]["168933146"](3324);if(a){window._jsl_exp_batch=window._jsl_exp_batch||[];for(var c=!1,b=0;b<window._jsl_exp_batch.length;b++)if(window._jsl_exp_batch[b].experiment_id===a){c=!0;break}c||window._jsl_exp_batch.push({experiment_id:a,experiment_variation_id:d||"default"});window._jsl_exp_timeout&&clearTimeout(window._jsl_exp_timeout);window._jsl_exp_timeout=setTimeout(function(){window._jsl_exp_batch.length>0&&(window.dataLayer.push({event:"experiments.triggered",
+experiments:window._jsl_exp_batch}),window._jsl_exp_batch=[]);window._jsl_exp_timeout=null},1E3)}})();</script><script type="text/javascript" id="" charset="">var _tvq=window._tvq=window._tvq||[];
+(function(){var c="https:"==document.location.protocol?"https://collector-37462.tvsquared.com/":"http://collector-37462.tvsquared.com/";_tvq.push(["setSiteId","TV-6327543672-1"]);_tvq.push(["setTrackerUrl",c+"tv2track.php"]);_tvq.push([function(){this.deleteCustomVariable(5,"page")}]);_tvq.push(["trackPageView"]);var a=document,b=a.createElement("script");a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.defer=!0;b.async=!0;b.src=c+"tv2track.js";a.parentNode.insertBefore(b,a)})();</script>
+
+<script type="text/javascript" id="" charset="">(function(){function f(b){for(var e=[],g=1;g<arguments.length;g++)e[g-1]=arguments[g];h.push({fnName:b,args:e})}var c="undefined";if(c&&c!=="undefined")try{localStorage.setItem("nb__region_code",c)}catch(b){}var a;(c=a=a||{}).A="identify";c.B="trackPageView";c.C="fireEmailCaptureEvent";c.D="fireCustomGoal";c.E="firePurchaseEvent";c.F="trackPageViewInitial";c="//j.northbeam.io/ota-sp/28b433d4-75f5-44b9-8cb6-38705b312346.js";var k,h=[],d=((k={})[a.F]=function(b){f(a.F,b)},(d={_q:h})[a.A]=function(b,e){return f(a.A,
+b,e)},d[a.B]=function(){return f(a.B)},d[a.C]=function(b,e){return f(a.C,b,e)},d[a.D]=function(b,e){return f(a.D,b,e)},d[a.E]=function(b){return f(a.E,b)},window.Northbeam=d,document.createElement("script"));d.async=!0;d.src=c;document.head.appendChild(d);k.trackPageViewInitial(window.location.href)})();</script>
+<script type="text/javascript" id="" charset="">!function(){var e="cioanalytics",a=window[e]=window[e]||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error("Snippet included twice.");else{a.invoked=!0;a.methods="trackSubmit trackClick trackLink trackForm pageview identify reset group track ready alias debug page once off on addSourceMiddleware addIntegrationMiddleware setAnonymousId addDestinationMiddleware".split(" ");a.factory=function(c){return function(){var d=Array.prototype.slice.call(arguments);d.unshift(c);a.push(d);
+return a}};for(var f=0;f<a.methods.length;f++){var g=a.methods[f];a[g]=a.factory(g)}a.load=function(c,d){var b=document.createElement("script");b.type="text/javascript";b.async=!0;b.setAttribute("data-global-customerio-analytics-key",e);b.src="https://cdp.customer.io/v1/analytics-js/snippet/"+c+"/analytics.min.js";var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(b,h);a._writeKey=c;a._loadOptions=d};a.SNIPPET_VERSION="4.15.3";a.load("955f385d9b5370b47802")}}();</script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script type="text/javascript" id="" charset="">(function(d){window["__adal_disable_"+d]||(function(a,c,b){if(!a[b]){a.GlobalAdalyserNamespace=a.GlobalAdalyserNamespace||[];a.GlobalAdalyserNamespace.push(b);a[b]=function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].q=a[b].q||[];var e=c.createElement("script");c=c.getElementsByTagName("script")[0];e.async=1;e.src="//c5.adalyser.com/adalyser.js?cid\x3d"+d;c.parentNode.insertBefore(e,c)}}(window,document,"adalyserTracker"),window.adalyserTracker("create",{campaignCookieTimeout:15552E3,conversionCookieTimeout:604800,
+clientId:d,trafficSourceInternalReferrers:["^(.*\\.)?joinvoy.*$"]}),window.adalyserTracker("trackSession","lce1"))})("voy");</script><div id="onetrust-consent-sdk" data-nosnippet="true"><div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div><div id="onetrust-pc-sdk" class="otPcCenter ot-hide ot-fade-in otRelFont" lang="en"><div role="dialog" aria-modal="true" style="height: 100%;" aria-label="Privacy Preference Center"><!-- Close Button --><div class="ot-pc-header"><!-- Logo Tag --><div class="ot-pc-logo"><img alt="Company Logo" src="https://cdn.cookielaw.org/logos/static/ot_company_logo.png"></div><button id="close-pc-btn-handler" class="ot-close-icon" aria-label="Close preference center" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);"></button></div><!-- Close Button --><div id="ot-pc-content" class="ot-pc-scrollbar"><div class="ot-optout-signal ot-hide"><div class="ot-optout-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="ot-floating-button__svg-fill" d="M14.588 0l.445.328c1.807 1.303 3.961 2.533 6.461 3.688 2.015.93 4.576 1.746 7.682 2.446 0 14.178-4.73 24.133-14.19 29.864l-.398.236C4.863 30.87 0 20.837 0 6.462c3.107-.7 5.668-1.516 7.682-2.446 2.709-1.251 5.01-2.59 6.906-4.016zm5.87 13.88a.75.75 0 00-.974.159l-5.475 6.625-3.005-2.997-.077-.067a.75.75 0 00-.983 1.13l4.172 4.16 6.525-7.895.06-.083a.75.75 0 00-.16-.973z" fill="#FFF" fill-rule="evenodd"></path></svg></div><span id="ot-pc-gpc-txt"></span></div><h2 id="ot-pc-title">Privacy Preference Center</h2><div id="ot-pc-desc">When you visit any website, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences, or your device, and is mostly used to make the site work as you expect. The information does not usually identify you directly, but it can give you a more personalized web experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to learn more and change our default settings. Blocking some types of cookies may impact your experience of the site and the services we are able to offer.
+            <br><a href="https://cookiepedia.co.uk/giving-consent-to-cookies" class="privacy-notice-link" rel="noopener noreferrer" target="_blank" aria-label="More information about your privacy, opens in a new tab">More information</a></div><button id="accept-recommended-btn-handler" ot-button-order="0">Allow All</button><section class="ot-sdk-row ot-cat-grp"><h3 id="ot-category-title"> Manage Consent Preferences</h3><div class="ot-accordion-layout ot-cat-item ot-vs-config" data-optanongroupid="C0002"><button aria-expanded="false" ot-accordion="true" aria-controls="ot-desc-id-C0002" aria-labelledby="ot-header-id-C0002"></button><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0002">Performance Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0002" id="ot-group-id-C0002" role="switch" class="category-switch-handler" data-optanongroupid="C0002" checked="" aria-labelledby="ot-header-id-C0002"> <label class="ot-switch" for="ot-group-id-C0002"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Performance Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0002">These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.</p></div></div><div class="ot-accordion-layout ot-cat-item ot-vs-config" data-optanongroupid="C0004"><button aria-expanded="false" ot-accordion="true" aria-controls="ot-desc-id-C0004" aria-labelledby="ot-header-id-C0004"></button><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0004">Targeting Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0004" id="ot-group-id-C0004" role="switch" class="category-switch-handler" data-optanongroupid="C0004" checked="" aria-labelledby="ot-header-id-C0004"> <label class="ot-switch" for="ot-group-id-C0004"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Targeting Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0004">These cookies may be set through our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies, you will experience less targeted advertising.</p></div></div><div class="ot-accordion-layout ot-cat-item ot-vs-config" data-optanongroupid="C0001"><button aria-expanded="false" ot-accordion="true" aria-controls="ot-desc-id-C0001" aria-labelledby="ot-header-id-C0001 ot-status-id-C0001"></button><!-- Accordion header --><div class="ot-acc-hdr ot-always-active-group"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0001">Strictly Necessary Cookies</h4><div id="ot-status-id-C0001" class="ot-always-active">Always Active</div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0001">These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.</p></div></div><div class="ot-accordion-layout ot-cat-item ot-vs-config" data-optanongroupid="C0003"><button aria-expanded="false" ot-accordion="true" aria-controls="ot-desc-id-C0003" aria-labelledby="ot-header-id-C0003"></button><!-- Accordion header --><div class="ot-acc-hdr"><div class="ot-plus-minus"><span></span><span></span></div><h4 class="ot-cat-header" id="ot-header-id-C0003">Functional Cookies</h4><div class="ot-tgl"><input type="checkbox" name="ot-group-id-C0003" id="ot-group-id-C0003" role="switch" class="category-switch-handler" data-optanongroupid="C0003" checked="" aria-labelledby="ot-header-id-C0003"> <label class="ot-switch" for="ot-group-id-C0003"><span class="ot-switch-nob"></span> <span class="ot-label-txt">Functional Cookies</span></label> </div></div><!-- accordion detail --><div class="ot-acc-grpcntr ot-acc-txt"><p class="ot-acc-grpdesc ot-category-desc" id="ot-desc-id-C0003">These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</p></div></div><!-- Groups sections starts --><!-- Group section ends --><!-- Accordion Group section starts --><!-- Accordion Group section ends --></section></div><section id="ot-pc-lst" class="ot-hide ot-hosts-ui ot-pc-scrollbar"><div id="ot-pc-hdr"><div id="ot-lst-title"><button class="ot-link-btn back-btn-handler" aria-label="Back"><svg id="ot-back-arw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 444.531 444.531" xml:space="preserve"><title>Back Button</title><g><path fill="#656565" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835
+                    l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425
+                    c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564
+                    s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978
+                    L213.13,222.409z"></path></g></svg></button><h3>Cookie List</h3></div><div class="ot-lst-subhdr"><div class="ot-search-cntr"><p role="status" class="ot-scrn-rdr"></p><input id="vendor-search-handler" type="text" name="vendor-search-handler" placeholder="Search…" aria-label="Cookie list search"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 -30 110 110" aria-hidden="true"><title>Search Icon</title><path fill="#2e3644" d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+            s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+            c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+            s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg></div><div class="ot-fltr-cntr"><button id="filter-btn-handler" aria-label="Filter Cookie List" aria-haspopup="true" aria-expanded="false"><svg role="presentation" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 402.577 402.577" xml:space="preserve"><title>Filter Icon</title><g><path fill="#fff" d="M400.858,11.427c-3.241-7.421-8.85-11.132-16.854-11.136H18.564c-7.993,0-13.61,3.715-16.846,11.136
+      c-3.234,7.801-1.903,14.467,3.999,19.985l140.757,140.753v138.755c0,4.955,1.809,9.232,5.424,12.854l73.085,73.083
+      c3.429,3.614,7.71,5.428,12.851,5.428c2.282,0,4.66-0.479,7.135-1.43c7.426-3.238,11.14-8.851,11.14-16.845V172.166L396.861,31.413
+      C402.765,25.895,404.093,19.231,400.858,11.427z"></path></g></svg></button></div><div id="ot-anchor"></div><section id="ot-fltr-modal"><div id="ot-fltr-cnt"><button id="clear-filters-handler">Clear</button><fieldset class="ot-fltr-scrlcnt ot-pc-scrollbar"><legend id="ot-filter-list-header"></legend><ul class="ot-fltr-opts"><li class="ot-fltr-opt"><div class="ot-chkbox"><input id="chkbox-id" type="checkbox" class="category-filter-handler"> <label for="chkbox-id"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div></li></ul><div class="ot-fltr-btns"><button id="filter-apply-handler">Apply</button> <button id="filter-cancel-handler">Cancel</button></div></fieldset></div></section></div></div><section id="ot-lst-cnt" class="ot-host-cnt ot-pc-scrollbar"><div id="ot-sel-blk"><div class="ot-sel-all"><div class="ot-sel-all-hdr"><span class="ot-consent-hdr">Consent</span> <span class="ot-li-hdr">Leg.Interest</span></div><div class="ot-sel-all-chkbox"><div class="ot-chkbox" id="ot-selall-hostcntr"><input id="select-all-hosts-groups-handler" type="checkbox"> <label for="select-all-hosts-groups-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div><div class="ot-chkbox" id="ot-selall-vencntr"><input id="select-all-vendor-groups-handler" type="checkbox"> <label for="select-all-vendor-groups-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div><div class="ot-chkbox" id="ot-selall-licntr"><input id="select-all-vendor-leg-handler" type="checkbox"> <label for="select-all-vendor-leg-handler"><span class="ot-label-txt">checkbox label</span></label> <span class="ot-label-status">label</span></div></div></div></div><div class="ot-sdk-row"><div class="ot-sdk-column"></div></div></section></section><div class="ot-pc-footer ot-pc-scrollbar"><div class="ot-btn-container"><button class="ot-pc-refuse-all-handler" ot-button-order="1">Reject All</button> <button class="save-preference-btn-handler onetrust-close-btn-handler" ot-button-order="2">Confirm My Choices</button></div><!-- Footer logo --><div class="ot-pc-footer-logo"><a href="https://www.onetrust.com/solutions/consent-and-preferences/" target="_blank" rel="noopener noreferrer" aria-label="Powered by OneTrust Opens in a new Tab"><img alt="Powered by Onetrust" src="https://cdn.cookielaw.org/logos/static/powered_by_logo.svg" title="Powered by OneTrust Opens in a new Tab"></a></div></div><!-- Cookie subgroup container --><!-- Vendor list link --><!-- Cookie lost link --><!-- Toggle HTML element --><!-- Checkbox HTML --><!-- plus minus--><!-- Arrow SVG element --><!-- Accordion basic element --><span class="ot-scrn-rdr" aria-atomic="true" aria-live="polite"></span><!-- Vendor Service container and item template --></div><iframe class="ot-text-resize" sandbox="allow-same-origin" title="onetrust-text-resize" style="position: absolute; top: -50000px; width: 100em;" aria-hidden="true"></iframe></div><div id="ot-sdk-btn-floating" class="ot-floating-button" data-title="Customise"><div class="ot-floating-button__front custom-persistent-icon"><button type="button" class="ot-floating-button__open" aria-label="Customise" aria-haspopup="dialog"></button></div><div class="ot-floating-button__back custom-persistent-icon"><button type="button" class="ot-floating-button__close" aria-label="Close Preferences" aria-hidden="true" style="display: none;"><!--?xml version="1.0" encoding="UTF-8"?--> <svg role="presentation" tabindex="-1" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Banner_02" class="ot-floating-button__svg-fill" transform="translate(-318.000000, -725.000000)" fill="#292B2E" fill-rule="nonzero"><g id="Group-2" transform="translate(305.000000, 712.000000)"><g id="icon/16px/white/close"><polygon id="Line1" points="13.3333333 14.9176256 35.0823744 36.6666667 36.6666667 35.0823744 14.9176256 13.3333333"></polygon><polygon id="Line2" transform="translate(25.000000, 25.000000) scale(-1, 1) translate(-25.000000, -25.000000) " points="13.3333333 14.9176256 35.0823744 36.6666667 36.6666667 35.0823744 14.9176256 13.3333333"></polygon></g></g></g></g></svg></button></div></div></div><div id="batBeacon734041021977" style="width: 0px; height: 0px; display: none; visibility: hidden;"><img id="batBeacon412918523260" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=211074533&amp;tm=gtm002&amp;Ver=2&amp;mid=c9496075-0db2-438c-bd93-4cdcbf70fb91&amp;bo=4&amp;sid=fd69ab708cc811f187e5690037f9971e&amp;vid=fd69e0e08cc811f19eab4d2249c2fba0&amp;vids=0&amp;msclkid=N&amp;uach=pv%3D19.0.0&amp;pi=918639831&amp;lg=en-GB&amp;sw=1920&amp;sh=1080&amp;sc=24&amp;tl=Your%20Proactive%20Companion%20for%20Healthy%20Living%20%7C%20Voy&amp;p=https%3A%2F%2Fwww.joinvoy.com%2F&amp;r=&amp;lt=513&amp;evt=pageLoad&amp;sv=2&amp;asc=G&amp;cdb=AQET&amp;rn=584835" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div><iframe src="https://www.mainadv.com/retargeting/live/zanox_rtg.aspx?Key=undefined&amp;visitorIp=undefined&amp;pageType=undefined" aria-hidden="true" style="height: 0px !important; width: 0px !important; visibility: hidden !important; display: inherit !important; margin: 0px !important; border: 0px !important; padding: 0px !important;"></iframe><script type="text/javascript" id="_aw_script_0" src="https://lantern.roeyecdn.com/lantern_global_123906.min.js"></script><img src="https://lantern.roeye.com/track.php?fingerprint=2b81b38c-cd54-4b6e-a41f-06bd7eab83aa&amp;referrer=&amp;landingpage=https%3A%2F%2Fwww.joinvoy.com%2F&amp;useragent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F150.0.0.0%20Safari%2F537.36&amp;site=123906" border="0" height="0" width="0" style="position: absolute; visibility: hidden;"><iframe id="_hjSafeContext_80257520" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="about:blank" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><script type="text/javascript" id="" charset="">(function(){function e(a,b,d){a=a||1;var f=10,h=Math.pow(2,a-1)*100;setTimeout(function(){typeof mixpanel!=="undefined"&&mixpanel.track?(mixpanel.track(b,d,{send_immediately:!0}),a>1&&console.log("Mixpanel - Event "+b+" succeeded on attempt "+a+". Event Params: "+JSON.stringify(d))):(console.log("Mixpanel - Event "+b+" failed on attempt "+a),a<f?e(a+1,b,d):console.error("Mixpanel failed to load after "+f+" attempts."))},h)}var c=google_tag_manager["rm"]["168933146"](3815);if(c&&c.length){window._jsl_tracked_exps=window._jsl_tracked_exps||
+{};var g=JSON.stringify(c);window._jsl_tracked_exps[g]||(window._jsl_tracked_exps[g]=!0,e(1,"experiments.triggered",{experiments:c}))}})();</script><script type="text/javascript" id="" charset="">(function(){function e(a,b,d){a=a||1;var f=10,h=Math.pow(2,a-1)*100;setTimeout(function(){typeof mixpanel!=="undefined"&&mixpanel.track?(mixpanel.track(b,d,{send_immediately:!0}),a>1&&console.log("Mixpanel - Event "+b+" succeeded on attempt "+a+". Event Params: "+JSON.stringify(d))):(console.log("Mixpanel - Event "+b+" failed on attempt "+a),a<f?e(a+1,b,d):console.error("Mixpanel failed to load after "+f+" attempts."))},h)}var c=google_tag_manager["rm"]["168933146"](3870);if(c&&c.length){window._jsl_tracked_exps=window._jsl_tracked_exps||
+{};var g=JSON.stringify(c);window._jsl_tracked_exps[g]||(window._jsl_tracked_exps[g]=!0,e(1,"experiments.triggered",{experiments:c}))}})();</script></body>
